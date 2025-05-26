@@ -1,97 +1,58 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Royal Events Company</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Events Company</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <img src="logo.png" alt="Royal Events Logo" class="logo">
+        <h1>Royal Events Company</h1>
+        <p class="motto">Beyond the normal look.</p>
+    </header>
 
-  <!-- NAVIGATION -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <strong class="logo">Royal Events</strong>
-      <div class="nav-links">
-        <a href="#mission">Mission</a>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </nav>
+    <main>
+        <section id="mission">
+            <h2>Mission Statement</h2>
+            <p>
+                Our goal is to design remarkable and unforgettable events that are the epitome of style, luxury, and accuracy.
+                We are dedicated to providing custom experiences that go above and above, making sure that each element embodies
+                quality, originality, and refinement. We turn ideas into stunning realities with an unwavering dedication to
+                excellence, making an enduring impression on our clients and their visitors.
+            </p>
+        </section>
 
-  <!-- HERO -->
-  <header>
-    <h1>Royal Events Company</h1>
-    <p>Beyond the normal look.</p>
-  </header>
+        <section id="vision">
+            <h2>Vision Statement</h2>
+            <p>
+                To be the premier luxury event company, known throughout the world for creating magnificent and unforgettable
+                events. By combining creativity, style, and flawless service, we aim to raise the bar for the event sector
+                and turn every event into a magnificent and sophisticated work of art.
+            </p>
+        </section>
 
-  <!-- MISSION & VISION -->
-  <section id="mission" class="section">
-    <div class="statement-box">
-      <h2>Mission</h2>
-      <p>Our goal is to design remarkable and unforgettable events that are the epitome of style, luxury, and accuracy. We are dedicated to providing custom experiences that go above and beyond, making sure that each element embodies quality, originality, and refinement.</p>
-    </div>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form action="https://formspree.io/f/xoqggkpo" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-    <div class="statement-box">
-      <h2>Vision</h2>
-      <p>To be the premier luxury event company, known throughout the world for creating magnificent and unforgettable events. We aim to raise the bar for the event sector and turn every event into a magnificent and sophisticated work of art.</p>
-    </div>
-  </section>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-  <!-- SERVICES -->
-  <section id="services" class="section">
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="service-card">
-        <h3>Wedding Planning</h3>
-        <p>Elegant, personalized wedding design and coordination to make your day perfect.</p>
-      </div>
-      <div class="service-card">
-        <h3>Corporate Events</h3>
-        <p>Professional and creative planning for corporate launches, galas, and conferences.</p>
-      </div>
-      <div class="service-card">
-        <h3>Luxury Parties</h3>
-        <p>From VIP birthdays to exclusive private events — every party with royal flair.</p>
-      </div>
-      <div class="service-card">
-        <h3>Event Styling</h3>
-        <p>Décor and ambiance tailored to match your vision with style and class.</p>
-      </div>
-    </div>
-  </section>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
 
-  <!-- GALLERY -->
-  <section id="gallery" class="section">
-    <h2>Gallery</h2>
-    <div class="gallery-grid">
-      <img src="https://source.unsplash.com/featured/?wedding,event" alt="Event 1" />
-      <img src="https://source.unsplash.com/featured/?party,decor" alt="Event 2" />
-      <img src="https://source.unsplash.com/featured/?luxury,venue" alt="Event 3" />
-      <img src="https://source.unsplash.com/featured/?celebration,flowers" alt="Event 4" />
-      <img src="https://source.unsplash.com/featured/?balloons,lighting" alt="Event 5" />
-      <img src="https://source.unsplash.com/featured/?tablescape,elegant" alt="Event 6" />
-    </div>
-  </section>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <h2>Contact Us</h2>
-    <form class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea rows="5" name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    &copy; 2025 Royal Events Company. All Rights Reserved.
-  </footer>
-
+    <footer>
+        <p>&copy; 2025 Royal Events Company. All rights reserved.</p>
+    </footer>
 </body>
 </html>
