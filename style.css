@@ -136,3 +136,39 @@ footer {
     background-color: #f1f1f1;
     font-size: 0.9em;
 }
+
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  padding: 60px 0;
+  background-color: #f8f9fa;
+}
+
+.about-card {
+  flex: 1 1 300px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.about-card h3 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #0f172a;
+}
+
+.about-card p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.about-card i {
+  font-size: 40px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
