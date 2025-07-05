@@ -214,23 +214,3 @@
   </footer>
 </body>
 </html>
-<form id="kycForm" enctype="multipart/form-data">
-  <input type="file" name="id_front" required />
-  <input type="file" name="selfie" required />
-  <button type="submit">Submit</button>
-</form>
-
-<script>
-document.getElementById('kycForm').addEventListener('submit', async function(e) {
-  e.preventDefault();
-  const formData = new FormData(this);
-
-  const response = await fetch('/api/kyc-submit', {
-    method: 'POST',
-    body: formData
-  });
-
-  const result = await response.json();
-  console.log(result);
-});
-</script>
