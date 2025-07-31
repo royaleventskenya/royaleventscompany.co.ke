@@ -206,7 +206,7 @@
       <input type="email" name="email" placeholder="Your Email" required>
       <input type="phone number" name="phone number" placeholder="Your Phone Number" required>
 <h3>🎉 Event Details</h3>
-      <label>Type of Event*</label>
+      <label>Type of Event</label>
       <select name="event_type" required> 
         <option value="">Select...</option>
         <option>Wedding</option>
@@ -220,9 +220,9 @@
 
       <label>Event Theme or Style</label>
       <input type="text" name="event_theme" placeholder="e.g. Rustic, Beach, Glamorous" required>
-      <label>Number of Guests*</label>
+      <label>Number of Guests</label>
       <input type="number" name="guest_count" required>
-      <label>Preferred Event Date*</label>
+      <label>Preferred Event Date</label>
       <input type="date" name="event_date" required>
       <label>Event Duration</label>
       <select name="event_duration" 
@@ -235,8 +235,25 @@
       <label>Event Location</label>
       <input type="text" name="event_location" placeholder="Venue address or general location" required>
 
-      
-      <textarea name="message" placeholder="Your Message" required></textarea>
+ <h3>🛠️ Services Needed</h3>
+      <p>Select all that apply:</p>
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 5px;">
+        <label><input type="checkbox" name="services[]" value="Planning"> Event Planning & Coordination</label>
+        <label><input type="checkbox" name="services[]" value="Venue"> Venue Sourcing</label>
+        <label><input type="checkbox" name="services[]" value="Catering"> Catering Services</label>
+        <label><input type="checkbox" name="services[]" value="Decor"> Decoration & Setup</label>
+        <label><input type="checkbox" name="services[]" value="Photography"> Photography & Videography</label>
+        <label><input type="checkbox" name="services[]" value="Sound"> Sound & Lighting</label>
+        <label><input type="checkbox" name="services[]" value="Entertainment"> Entertainment (DJ, MC)</label>
+        <label><input type="checkbox" name="services[]" value="Transport"> Transport & Logistics</label>
+        <label><input type="checkbox" name="services[]" value="Branding"> Branding / Printing</label>
+        <label><input type="checkbox" name="services[]" value="Other"> Other</label>
+      </div>
+
+        <label style="margin-top: 10px;">Estimated Budget (KES)</label>
+      <input type="number" name="budget" placeholder="e.g. 100000" style="width: 100%; padding: 10px; margin: 8px 0;">
+
+     
       <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
       <input type="hidden" name="_subject" value="New Contact Form Submission">
       <button type="submit">Send</button>
