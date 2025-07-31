@@ -205,6 +205,41 @@
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <input type="phone number" name="phone number" placeholder="Your Phone Number" required>
+<h3>🎉 Event Details</h3>
+      <label>Type of Event*</label>
+      <select name="event_type" required style="width: 100%; padding: 10px; margin: 8px 0;">
+        <option value="">Select...</option>
+        <option>Wedding</option>
+        <option>Birthday</option>
+        <option>Corporate Event</option>
+        <option>Graduation</option>
+        <option>Concert</option>
+        <option>Baby Shower</option>
+        <option>Other</option>
+      </select>
+
+      <label>Event Theme or Style</label>
+      <input type="text" name="event_theme" placeholder="e.g. Rustic, Beach, Glamorous" style="width: 100%; padding: 10px; margin: 8px 0;">
+
+      <label>Number of Guests*</label>
+      <input type="number" name="guest_count" required min="1" style="width: 100%; padding: 10px; margin: 8px 0;">
+
+      <label>Preferred Event Date*</label>
+      <input type="date" name="event_date" required style="width: 100%; padding: 10px; margin: 8px 0;">
+
+      <label>Event Duration</label>
+      <select name="event_duration" style="width: 100%; padding: 10px; margin: 8px 0;">
+        <option value="">Select...</option>
+        <option>Half Day</option>
+        <option>Full Day</option>
+        <option>Multi-Day</option>
+      </select>
+
+      <label>Event Location</label>
+      <input type="text" name="event_location" placeholder="Venue address or general location" style="width: 100%; padding: 10px; margin: 8px 0;">
+
+
+      
       <textarea name="message" placeholder="Your Message" required></textarea>
       <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
       <input type="hidden" name="_subject" value="New Contact Form Submission">
