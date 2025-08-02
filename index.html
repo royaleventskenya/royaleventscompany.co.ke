@@ -1,7 +1,8 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Royal Events Kenya</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
@@ -12,44 +13,54 @@
       margin: 0;
       font-family: 'Poppins', sans-serif;
       line-height: 1.6;
-      scroll-behavior: smooth;
       background-color: #f9f9f9;
       color: #333;
     }
     header {
-      background:<img src="https://images.pexels.com/photos/31280254/pexels-photo-31280254.jpeg" alt="Wedding party in red gowns">
-
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
       position: relative;
+      height: 100vh;
+      overflow: hidden;
+      color: white;
     }
-    header::before {
-      content: '';
+    .slideshow {
       position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      height: 100%;
+      z-index: 0;
     }
-    header .content {
+    .slideshow img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+    }
+    .slideshow img.active {
+      opacity: 1;
+    }
+    .header-content {
       position: relative;
       z-index: 1;
-      max-width: 700px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      text-align: center;
       padding: 20px;
     }
-    header h1 {
+    .header-content h1 {
       font-family: 'Playfair Display', serif;
       font-size: 3.5rem;
       margin-bottom: 10px;
     }
-    header p {
+    .header-content p {
       font-size: 1.2rem;
       margin-bottom: 30px;
     }
-    header a {
+    .header-content a {
       padding: 12px 30px;
       background: gold;
       color: #000;
@@ -58,7 +69,7 @@
       border-radius: 30px;
       transition: background 0.3s;
     }
-    header a:hover {
+    .header-content a:hover {
       background: #cfa100;
     }
     section {
@@ -103,7 +114,7 @@
       max-width: 600px;
       margin: auto;
     }
-    input, textarea {
+    input, textarea, select {
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 8px;
@@ -128,140 +139,94 @@
   </style>
 </head>
 <body>
+
   <header>
-    <div class="content">
+    <div class="slideshow">
+      <img src="https://images.pexels.com/photos/31280254/pexels-photo-31280254.jpeg" class="active">
+      <img src="https://images.pexels.com/photos/1488314/pexels-photo-1488314.jpeg">
+      <img src="https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg">
+      <img src="https://images.pexels.com/photos/2525630/pexels-photo-2525630.jpeg">
+      <img src="https://images.pexels.com/photos/4778350/pexels-photo-4778350.jpeg">
+      <img src="https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg">
+    </div>
+    <div class="header-content">
       <h1>Making Every Event Royal</h1>
       <p>Experience elegance, creativity, and professionalism with Royal Events Kenya.</p>
       <a href="#contact">Book Now</a>
     </div>
-  </header>  <section>
+  </header>
+
+  <section id="services">
     <h2 class="section-title">Our Services</h2>
     <div class="services">
-      <div class="service-card">
-        <h3>Weddings</h3>
-        <p>Elegant and unforgettable wedding planning tailored to your love story.</p>
-      </div>
-      <div class="service-card">
-        <h3>Corporate Events</h3>
-        <p>Professional and seamless execution for all your business functions.</p>
-      </div>
-      <div class="service-card">
-        <h3>Parties & Celebrations</h3>
-        <p>From birthdays to baby showers — we bring the joy to your day.</p>
-      </div>
-      <div class="service-card">
-        <h3>Event Branding</h3>
-        <p>Stand out with custom décor, signage, and branded materials.</p>
-      </div>
+      <div class="service-card">Weddings</div>
+      <div class="service-card">Corporate Events</div>
+      <div class="service-card">Parties & Celebrations</div>
+      <div class="service-card">Event Decor</div>
+      <div class="service-card">Branding & Design</div>
     </div>
- <section>
-  <h2 class="section-title">Gallery</h2>
-  <div class="gallery">
+  </section>
 
+  <section id="gallery">
+    <h2 class="section-title">Gallery</h2>
+    <div class="gallery">
+      <img src="https://images.pexels.com/photos/31280254/pexels-photo-31280254.jpeg">
+      <img src="https://images.pexels.com/photos/4778350/pexels-photo-4778350.jpeg">
+      <img src="https://images.pexels.com/photos/3014856/pexels-photo-3014856.jpeg">
+      <img src="https://images.pexels.com/photos/2525630/pexels-photo-2525630.jpeg">
+      <img src="https://images.pexels.com/photos/1488314/pexels-photo-1488314.jpeg">
+    </div>
+  </section>
 
-    
-  </div>
-</section>
-    <h2 class="section-title">Testimonials</h2>
+  <section id="testimonials">
+    <h2 class="section-title">What Our Clients Say</h2>
     <div class="testimonials">
-      <div class="testimonial-card">
-        <p>"Royal Events made our wedding unforgettable! The attention to detail was amazing."</p>
-        <strong>- Grace & David</strong>
-      </div>
-      <div class="testimonial-card">
-        <p>"Truly professional team. Our corporate gala was a major success thanks to them."</p>
-        <strong>- KenTech Ltd.</strong>
-      </div>
+      <div class="testimonial-card">"They made our wedding unforgettable!"</div>
+      <div class="testimonial-card">"Professional and reliable team."</div>
+      <div class="testimonial-card">"Our corporate event was flawless!"</div>
     </div>
-  </section>  <section id="blog">
-    <h2 class="section-title">Our Blog</h2>
+  </section>
+
+  <section id="blog">
+    <h2 class="section-title">Latest Blog Posts</h2>
     <div class="blog-posts">
-      <div class="blog-post">
-        <h3><a href="blog/post1.html">Top 5 Event Planning Tips</a></h3>
-        <p>Discover essential tips to make your next event a success.</p>
-      </div>
-      <div class="blog-post">
-        <h3><a href="blog/post2.html">Trends in Event Decor 2025</a></h3>
-        <p>Explore this year's hottest event styling and decor ideas.</p>
-      </div>
+      <div class="blog-post">Top 10 Wedding Trends in Kenya</div>
+      <div class="blog-post">How to Plan a Perfect Baby Shower</div>
+      <div class="blog-post">Corporate Event Planning Tips</div>
     </div>
-  </section>  <section id="contact">
+  </section>
+
+  <section id="contact">
     <h2 class="section-title">Contact Us</h2>
-    <form action="https://formsubmit.co/robinsonomare12@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="phone number" name="phone number" placeholder="Your Phone Number" required>
-<h3>🎉 Event Details</h3>
-      <label>Type of Event</label>
-      <select name="event_type" required> 
-        <option value="">Select...</option>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email Address" required>
+      <input type="tel" placeholder="Phone Number">
+      <select>
+        <option>Select Service</option>
         <option>Wedding</option>
-        <option>Birthday</option>
-        <option>Corporate Event</option>
-        <option>Graduation</option>
-        <option>Concert</option>
-        <option>Baby Shower</option>
-        <option>Other</option>
+        <option>Corporate</option>
+        <option>Party</option>
       </select>
-
-      <label>Event Theme or Style</label>
-      <input type="text" name="event_theme" placeholder="e.g. Rustic, Beach, Glamorous" required>
-      <label>Number of Guests</label>
-      <input type="number" name="guest_count" required>
-      <label>Preferred Event Date</label>
-      <input type="date" name="event_date" required>
-      <label>Event Duration</label>
-      <select name="event_duration" 
-        <option value="">Select...</option>
-        <option>Half Day</option>
-        <option>Full Day</option>
-        <option>Multi-Day</option>
-      </select>
-
-      <label>Event Location</label>
-      <input type="text" name="event_location" placeholder="Venue address or general location" required>
-
- <h3>🛠️ Services Needed</h3>
-      <p>Select all that apply:</p>
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 5px;">
-        <label><input type="checkbox" name="services[]" value="Planning"> Event Planning & Coordination</label>
-        <label><input type="checkbox" name="services[]" value="Venue"> Venue Sourcing</label>
-        <label><input type="checkbox" name="services[]" value="Catering"> Catering Services</label>
-        <label><input type="checkbox" name="services[]" value="Decor"> Decoration & Setup</label>
-        <label><input type="checkbox" name="services[]" value="Photography"> Photography & Videography</label>
-        <label><input type="checkbox" name="services[]" value="Sound"> Sound & Lighting</label>
-        <label><input type="checkbox" name="services[]" value="Entertainment"> Entertainment (DJ, MC)</label>
-        <label><input type="checkbox" name="services[]" value="Transport"> Transport & Logistics</label>
-        <label><input type="checkbox" name="services[]" value="Branding"> Branding / Printing</label>
-        <label><input type="checkbox" name="services[]" value="Other"> Other</label>
-      </div>
-
-        <label style="margin-top: 10px;">Estimated Budget (KES)</label>
-      <input type="number" name="budget" placeholder="e.g. 100000" style="width: 100%; padding: 10px; margin: 8px 0;">
-
-      <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
-      <input type="hidden" name="_subject" value="New Contact Form Submission">
-     
-      <button type="submit">Send</button>
+      <textarea placeholder="Message" rows="5"></textarea>
+      <button type="submit">Send Message</button>
     </form>
-    <p style="text-align:center; margin-top:20px;">
-  📞 Call us: +254 797 859 232<br>
-  ✉️ Email: royaleventscompany.co.ke@gmail.com
-</p>
-  </section>  <section id="about">
-    <h2 class="section-title">About Us</h2>
-    <div class="about-section">
-      <div class="about-card">
-        <h3>Our Mission</h3>
-        <p>To provide exceptional event planning and management services that exceed our clients’ expectations, turning their visions into memorable experiences.</p>
-      </div>
-      <div class="about-card">
-        <h3>Our Vision</h3>
-        <p>To be the leading event management company in Kenya and beyond, renowned for creativity, professionalism, and customer satisfaction.</p>
-      </div>
-    </div>
-  </section>  <footer>
+  </section>
+
+  <footer>
     <p>&copy; 2025 Royal Events Kenya. All Rights Reserved.</p>
   </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slideshow img');
+    let current = 0;
+
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 4000);
+  </script>
 </body>
-</html>                                                                      remove the background image code and include an automatic slide show on the top part of the website to run images about the company
+</html>
+
