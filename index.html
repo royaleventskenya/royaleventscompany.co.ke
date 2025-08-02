@@ -1,10 +1,29 @@
- <!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Royal Events Kenya</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    header, section, footer {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
     .slideshow-container {
       position: relative;
       width: 100%;
@@ -41,11 +60,12 @@
       text-align: center;
       color: white;
       background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
     }
 
     .header-content h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3.5rem;
+      font-size: 3rem;
       margin-bottom: 10px;
     }
 
@@ -67,101 +87,133 @@
     .header-content a:hover {
       background: #cfa100;
     }
-  </style>
 
-  <header>
-    <div class="slideshow-container">
-      <img src="https://images.pexels.com/photos/31280254/pexels-photo-31280254.jpeg" alt="Wedding party" class="slide active">
-      <img src="https://images.pexels.com/photos/14274732/pexels-photo-14274732.jpeg" alt="Decor setup" class="slide">
-      <img src="https://images.pexels.com/photos/2104256/pexels-photo-2104256.jpeg" alt="Event team" class="slide">
-
-      <div class="header-content">
-        <h1>Making Every Event Royal</h1>
-        <p>Experience elegance, creativity, and professionalism with Royal Events Kenya.</p>
-        <a href="#contact">Book Now</a>
-      </div>
-    </div>
-  </header>
-
-  <script>
-    let slides = document.querySelectorAll(".slide");
-    let index = 0;
-
-    function showNextSlide() {
-      slides[index].classList.remove("active");
-      index = (index + 1) % slides.length;
-      slides[index].classList.add("active");
+    .section-title {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 40px;
+      color: #444;
     }
 
-    setInterval(showNextSlide, 4000); // Change image every 4 seconds
-  </script>
+    .services, .about-section, .testimonials, .blog-posts {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .service-card, .testimonial-card, .about-card, .blog-post {
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    form {
+      display: grid;
+      gap: 15px;
+      background: #f5f5f5;
+      padding: 30px;
+      border-radius: 10px;
+    }
+
+    input, select, textarea, button {
+      padding: 10px;
+      font-size: 1rem;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background: gold;
+      color: black;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #cfa100;
+    }
+
+    footer {
+      text-align: center;
+      background: #222;
+      color: #fff;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .header-content h1 {
+        font-size: 2rem;
+      }
+
+      .header-content p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
 <body>
-  <header>
-    <div class="content">
+
+  <!-- Hero / Slideshow -->
+  <div class="slideshow-container">
+    <img src="https://images.pexels.com/photos/31280254/pexels-photo-31280254.jpeg" alt="Wedding party" class="slide active">
+    <img src="https://images.pexels.com/photos/14274732/pexels-photo-14274732.jpeg" alt="Decor setup" class="slide">
+    <img src="https://images.pexels.com/photos/2104256/pexels-photo-2104256.jpeg" alt="Event team" class="slide">
+    <div class="header-content">
       <h1>Making Every Event Royal</h1>
       <p>Experience elegance, creativity, and professionalism with Royal Events Kenya.</p>
       <a href="#contact">Book Now</a>
     </div>
-  </header>  <section>
+  </div>
+
+  <!-- Services -->
+  <section>
     <h2 class="section-title">Our Services</h2>
     <div class="services">
-      <div class="service-card">
-        <h3>Weddings</h3>
-        <p>Elegant and unforgettable wedding planning tailored to your love story.</p>
-      </div>
-      <div class="service-card">
-        <h3>Corporate Events</h3>
-        <p>Professional and seamless execution for all your business functions.</p>
-      </div>
-      <div class="service-card">
-        <h3>Parties & Celebrations</h3>
-        <p>From birthdays to baby showers — we bring the joy to your day.</p>
-      </div>
-      <div class="service-card">
-        <h3>Event Branding</h3>
-        <p>Stand out with custom décor, signage, and branded materials.</p>
-      </div>
+      <div class="service-card"><h3>Weddings</h3><p>Elegant and unforgettable wedding planning tailored to your love story.</p></div>
+      <div class="service-card"><h3>Corporate Events</h3><p>Professional and seamless execution for all your business functions.</p></div>
+      <div class="service-card"><h3>Parties & Celebrations</h3><p>From birthdays to baby showers — we bring the joy to your day.</p></div>
+      <div class="service-card"><h3>Event Branding</h3><p>Stand out with custom décor, signage, and branded materials.</p></div>
     </div>
- <section>
-  <h2 class="section-title">Gallery</h2>
-  <div class="gallery">
+  </section>
 
+  <!-- Gallery Placeholder -->
+  <section>
+    <h2 class="section-title">Gallery</h2>
+    <div class="gallery"><!-- Add images here later --></div>
+  </section>
 
-    
-  </div>
-</section>
+  <!-- Testimonials -->
+  <section>
     <h2 class="section-title">Testimonials</h2>
     <div class="testimonials">
-      <div class="testimonial-card">
-        <p>"Royal Events made our wedding unforgettable! The attention to detail was amazing."</p>
-        <strong>- Grace & David</strong>
-      </div>
-      <div class="testimonial-card">
-        <p>"Truly professional team. Our corporate gala was a major success thanks to them."</p>
-        <strong>- KenTech Ltd.</strong>
-      </div>
+      <div class="testimonial-card"><p>"Royal Events made our wedding unforgettable! The attention to detail was amazing."</p><strong>- Grace & David</strong></div>
+      <div class="testimonial-card"><p>"Truly professional team. Our corporate gala was a major success thanks to them."</p><strong>- KenTech Ltd.</strong></div>
     </div>
-  </section>  <section id="blog">
+  </section>
+
+  <!-- Blog -->
+  <section id="blog">
     <h2 class="section-title">Our Blog</h2>
     <div class="blog-posts">
-      <div class="blog-post">
-        <h3><a href="blog/post1.html">Top 5 Event Planning Tips</a></h3>
-        <p>Discover essential tips to make your next event a success.</p>
-      </div>
-      <div class="blog-post">
-        <h3><a href="blog/post2.html">Trends in Event Decor 2025</a></h3>
-        <p>Explore this year's hottest event styling and decor ideas.</p>
-      </div>
+      <div class="blog-post"><h3><a href="blog/post1.html">Top 5 Event Planning Tips</a></h3><p>Discover essential tips to make your next event a success.</p></div>
+      <div class="blog-post"><h3><a href="blog/post2.html">Trends in Event Decor 2025</a></h3><p>Explore this year's hottest event styling and decor ideas.</p></div>
     </div>
-  </section>  <section id="contact">
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
     <h2 class="section-title">Contact Us</h2>
     <form action="https://formsubmit.co/robinsonomare12@gmail.com" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
-      <input type="phone number" name="phone number" placeholder="Your Phone Number" required>
-<h3>🎉 Event Details</h3>
+      <input type="text" name="phone" placeholder="Your Phone Number" required>
+
+      <h3>🎉 Event Details</h3>
       <label>Type of Event</label>
-      <select name="event_type" required> 
+      <select name="event_type" required>
         <option value="">Select...</option>
         <option>Wedding</option>
         <option>Birthday</option>
@@ -179,7 +231,7 @@
       <label>Preferred Event Date</label>
       <input type="date" name="event_date" required>
       <label>Event Duration</label>
-      <select name="event_duration" 
+      <select name="event_duration" required>
         <option value="">Select...</option>
         <option>Half Day</option>
         <option>Full Day</option>
@@ -189,7 +241,7 @@
       <label>Event Location</label>
       <input type="text" name="event_location" placeholder="Venue address or general location" required>
 
- <h3>🛠️ Services Needed</h3>
+      <h3>🛠️ Services Needed</h3>
       <p>Select all that apply:</p>
       <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 5px;">
         <label><input type="checkbox" name="services[]" value="Planning"> Event Planning & Coordination</label>
@@ -204,19 +256,23 @@
         <label><input type="checkbox" name="services[]" value="Other"> Other</label>
       </div>
 
-        <label style="margin-top: 10px;">Estimated Budget (KES)</label>
-      <input type="number" name="budget" placeholder="e.g. 100000" style="width: 100%; padding: 10px; margin: 8px 0;">
+      <label>Estimated Budget (KES)</label>
+      <input type="number" name="budget" placeholder="e.g. 100000">
 
       <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
       <input type="hidden" name="_subject" value="New Contact Form Submission">
-     
+
       <button type="submit">Send</button>
     </form>
+
     <p style="text-align:center; margin-top:20px;">
-  📞 Call us: +254 797 859 232<br>
-  ✉️ Email: royaleventscompany.co.ke@gmail.com
-</p>
-  </section>  <section id="about">
+      📞 Call us: +254 797 859 232<br>
+      ✉️ Email: royaleventscompany.co.ke@gmail.com
+    </p>
+  </section>
+
+  <!-- About -->
+  <section id="about">
     <h2 class="section-title">About Us</h2>
     <div class="about-section">
       <div class="about-card">
@@ -228,8 +284,24 @@
         <p>To be the leading event management company in Kenya and beyond, renowned for creativity, professionalism, and customer satisfaction.</p>
       </div>
     </div>
-  </section>  <footer>
+  </section>
+
+  <!-- Footer -->
+  <footer>
     <p>&copy; 2025 Royal Events Kenya. All Rights Reserved.</p>
   </footer>
+
+  <script>
+    let slides = document.querySelectorAll(".slide");
+    let index = 0;
+
+    function showNextSlide() {
+      slides[index].classList.remove("active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("active");
+    }
+
+    setInterval(showNextSlide, 4000);
+  </script>
 </body>
-</html>                                                                   
+</html>
