@@ -5,18 +5,99 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Royal Events Kenya</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+ 
+    <style>
+     .hamburger {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      background: rgba(0, 0, 0, 0.9);
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      display: none;
+      padding: 10px 0;
     }
 
-    body {
-      font-family: 'Poppins', sans-serif;
-      line-height: 1.6;
-      color: #333;
+    .nav-links.active {
+      display: flex;
     }
+
+    .hamburger {
+      display: block;
+    }
+
+    .nav-container {
+      flex-wrap: wrap;
+    }
+
+    .nav-links li {
+      text-align: center;
+      padding: 10px 0;
+    }
+  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+</style>
+.navbar {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  padding: 15px 0;
+  color: white;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex; /* 💡 THIS is what makes it horizontal */
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: gold;
+}
 
     header, section, footer {
       padding: 60px 20px;
@@ -142,35 +223,35 @@
       color: #fff;
       padding: 20px;
     }
-
-    @media (max-width: 768px) {
+  @media (max-width: 768px) {
       .header-content h1 {
         font-size: 2rem;
-      }
-
-      .header-content p {
+      }.header-content p {
         font-size: 1rem;
       }
     }
   </style>
 </head>
-<body>
+
 <body>
   <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="nav-logo">Royal Events Kenya</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">Royal Events Kenya</div>
 
+    <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
    <!-- Hero Section -->
   <div class="slideshow-container" id="home">
     <img src="https://images.pexels.com/photos/31280254/pexels-photo-31280254.jpeg" alt="Wedding party" class="slide active">
@@ -318,5 +399,11 @@
 
     setInterval(showNextSlide, 4000);
   </script>
+ <script>
+  function toggleMenu() {
+    const nav = document.getElementById("navLinks");
+    nav.classList.toggle("active");
+  }
+</script> 
 </body>
 </html>
