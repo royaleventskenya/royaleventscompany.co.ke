@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Royal Events Kenya</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after {
       box-sizing: border-box;
@@ -54,7 +54,7 @@
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.5);
     }
     header .content {
       position: relative;
@@ -150,6 +150,7 @@
   </style>
 </head>
 <body>
+
   <nav>
     <ul>
       <li><a href="#">Home</a></li>
@@ -160,6 +161,7 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
+
   <header>
     <div class="content">
       <h1>Making Every Event Royal</h1>
@@ -167,5 +169,67 @@
       <a href="#contact">Book Now</a>
     </div>
   </header>
+
+  <section id="services">
+    <h2 class="section-title">Our Services</h2>
+    <div class="services">
+      <div class="service-card"><h3>Weddings</h3><p>Elegant wedding planning & coordination.</p></div>
+      <div class="service-card"><h3>Corporate Events</h3><p>Professional and memorable experiences.</p></div>
+      <div class="service-card"><h3>Birthday Parties</h3><p>Colorful, fun-filled birthday arrangements.</p></div>
+      <div class="service-card"><h3>Bridal Showers</h3><p>Stylish and classy bridal moments.</p></div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2 class="section-title">Gallery</h2>
+    <div class="gallery">
+      <img src="https://images.pexels.com/photos/18163130/pexels-photo-18163130.jpeg" alt="Wedding"/>
+      <img src="https://images.pexels.com/photos/17432283/pexels-photo-17432283.jpeg" alt="Event Setup"/>
+      <img src="https://images.pexels.com/photos/17231894/pexels-photo-17231894.jpeg" alt="Couple"/>
+      <img src="https://images.pexels.com/photos/14053406/pexels-photo-14053406.jpeg" alt="Reception"/>
+    </div>
+  </section>
+
+  <section id="blog">
+    <h2 class="section-title">Latest Blog Posts</h2>
+    <div class="blog-posts">
+      <div class="blog-post"><h3>Top Wedding Trends in Kenya</h3><p>Explore the latest wedding trends for 2025.</p></div>
+      <div class="blog-post"><h3>Event Budgeting Tips</h3><p>How to host a classy event on a budget.</p></div>
+      <div class="blog-post"><h3>Choosing the Perfect Venue</h3><p>Venue selection tips for unforgettable events.</p></div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2 class="section-title">About Us</h2>
+    <div class="about-section">
+      <div class="about-card">
+        <h3>Who We Are</h3>
+        <p>Royal Events Kenya is a premium event planning company delivering exceptional events with elegance and style.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required/>
+      <input type="email" placeholder="Your Email" required/>
+      <input type="tel" placeholder="Phone Number" required/>
+      <select required>
+        <option value="">Select Service</option>
+        <option value="wedding">Wedding</option>
+        <option value="corporate">Corporate Event</option>
+        <option value="birthday">Birthday</option>
+        <option value="bridal">Bridal Shower</option>
+      </select>
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button type="submit">Send Request</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Royal Events Kenya. All rights reserved.
+  </footer>
+
 </body>
 </html>
