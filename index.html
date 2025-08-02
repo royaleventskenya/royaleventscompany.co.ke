@@ -1,124 +1,140 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Royal Events Kenya</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    *, *::before, *::after {
+    * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
+
     body {
-      margin: 0;
       font-family: 'Poppins', sans-serif;
-      line-height: 1.6;
-      scroll-behavior: smooth;
-      background-color: #f9f9f9;
+      background: #fdfdfd;
       color: #333;
     }
-    header {
-      background:
-      <img src="pexels-krm-graphics-2150677566-31280254.jpg"> 
-      height: 100vh;
+
+    /* NAVIGATION */
+    nav {
+      position: fixed;
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      position: relative;
+      padding: 15px 30px;
+      z-index: 1000;
     }
-    header::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.6);
-    }
-    header .content {
-      position: relative;
-      z-index: 1;
-      max-width: 700px;
-      padding: 20px;
-    }
-    header h1 {
+
+    nav .logo {
       font-family: 'Playfair Display', serif;
-      font-size: 3.5rem;
-      margin-bottom: 10px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #eab308;
     }
-    header p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
     }
-    header a {
-      padding: 12px 30px;
-      background: gold;
-      color: #000;
+
+    nav ul li a {
       text-decoration: none;
+      color: #333;
       font-weight: 600;
-      border-radius: 30px;
-      transition: background 0.3s;
+      transition: color 0.3s;
     }
-    header a:hover {
-      background: #cfa100;
+
+    nav ul li a:hover {
+      color: #eab308;
     }
+
+    /* SLIDESHOW */
+    .slideshow {
+      margin-top: 70px;
+      position: relative;
+      width: 100%;
+      height: 90vh;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      width: 500%;
+      animation: slide 25s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 90vh;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0% {margin-left: 0%;}
+      20% {margin-left: 0%;}
+      25% {margin-left: -100%;}
+      45% {margin-left: -100%;}
+      50% {margin-left: -200%;}
+      70% {margin-left: -200%;}
+      75% {margin-left: -300%;}
+      95% {margin-left: -300%;}
+      100% {margin-left: -400%;}
+    }
+
+    /* SECTION BASE */
     section {
       padding: 60px 20px;
       max-width: 1200px;
       margin: auto;
     }
+
     .section-title {
       text-align: center;
       font-size: 2rem;
       margin-bottom: 40px;
       font-family: 'Playfair Display', serif;
     }
-    .services, .testimonials, .about-section, .blog-posts {
+
+    /* SERVICES */
+    .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
     }
-    .service-card, .testimonial-card, .about-card, .blog-post {
-      background: white;
+
+    .service-card {
+      background: #fff;
       padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       text-align: center;
     }
+
+    /* GALLERY */
     .gallery {
       display: flex;
       flex-wrap: wrap;
-      gap: 15px;
       justify-content: center;
+      gap: 15px;
     }
+
     .gallery img {
       width: 100%;
       max-width: 300px;
-      border-radius: 10px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      max-width: 600px;
-      margin: auto;
-    }
-    input, textarea {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-    button {
-      padding: 12px;
-      background: gold;
-      border: none;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #cfa100;
-    }
+
+    /* FOOTER */
     footer {
       background: #111;
       color: white;
@@ -128,13 +144,33 @@
   </style>
 </head>
 <body>
-  <header>
-    <div class="content">
-      <h1>Making Every Event Royal</h1>
-      <p>Experience elegance, creativity, and professionalism with Royal Events Kenya.</p>
-      <a href="#contact">Book Now</a>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="logo">Royal Events Kenya</div>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#blog">Blog</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- SLIDESHOW -->
+  <div class="slideshow">
+    <div class="slides">
+      <img src="https://images.pexels.com/photos/2695867/pexels-photo-2695867.jpeg" alt="Wedding Kenya">
+      <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg" alt="Corporate Event Kenya">
+      <img src="https://images.pexels.com/photos/1456957/pexels-photo-1456957.jpeg" alt="Party Kenya">
+      <img src="https://images.pexels.com/photos/3622565/pexels-photo-3622565.jpeg" alt="Baby Shower Kenya">
+      <img src="https://images.pexels.com/photos/8041489/pexels-photo-8041489.jpeg" alt="Event Decor Kenya">
     </div>
-  </header>  <section>
+  </div>
+
+  <!-- SERVICES SECTION -->
+  <section id="services">
     <h2 class="section-title">Our Services</h2>
     <div class="services">
       <div class="service-card">
@@ -154,114 +190,43 @@
         <p>Stand out with custom décor, signage, and branded materials.</p>
       </div>
     </div>
- <section>
-  <h2 class="section-title">Gallery</h2>
-  <div class="gallery">
+  </section>
 
-
-    
-  </div>
-</section>
-    <h2 class="section-title">Testimonials</h2>
-    <div class="testimonials">
-      <div class="testimonial-card">
-        <p>"Royal Events made our wedding unforgettable! The attention to detail was amazing."</p>
-        <strong>- Grace & David</strong>
-      </div>
-      <div class="testimonial-card">
-        <p>"Truly professional team. Our corporate gala was a major success thanks to them."</p>
-        <strong>- KenTech Ltd.</strong>
-      </div>
+  <!-- GALLERY SECTION -->
+  <section id="gallery">
+    <h2 class="section-title">Event Gallery</h2>
+    <div class="gallery">
+      <img src="https://images.pexels.com/photos/1627665/pexels-photo-1627665.jpeg" alt="Wedding">
+      <img src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg" alt="Corporate Event">
+      <img src="https://images.pexels.com/photos/1111360/pexels-photo-1111360.jpeg" alt="Birthday Party">
+      <img src="https://images.pexels.com/photos/360912/pexels-photo-360912.jpeg" alt="Event Decor">
+      <img src="https://images.pexels.com/photos/1395967/pexels-photo-1395967.jpeg" alt="Baby Shower">
+      <img src="https://images.pexels.com/photos/2695927/pexels-photo-2695927.jpeg" alt="Event Branding">
     </div>
-  </section>  <section id="blog">
-    <h2 class="section-title">Our Blog</h2>
-    <div class="blog-posts">
-      <div class="blog-post">
-        <h3><a href="blog/post1.html">Top 5 Event Planning Tips</a></h3>
-        <p>Discover essential tips to make your next event a success.</p>
-      </div>
-      <div class="blog-post">
-        <h3><a href="blog/post2.html">Trends in Event Decor 2025</a></h3>
-        <p>Explore this year's hottest event styling and decor ideas.</p>
-      </div>
-    </div>
-  </section>  <section id="contact">
-    <h2 class="section-title">Contact Us</h2>
-    <form action="https://formsubmit.co/robinsonomare12@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="phone number" name="phone number" placeholder="Your Phone Number" required>
-<h3>🎉 Event Details</h3>
-      <label>Type of Event</label>
-      <select name="event_type" required> 
-        <option value="">Select...</option>
-        <option>Wedding</option>
-        <option>Birthday</option>
-        <option>Corporate Event</option>
-        <option>Graduation</option>
-        <option>Concert</option>
-        <option>Baby Shower</option>
-        <option>Other</option>
-      </select>
+  </section>
 
-      <label>Event Theme or Style</label>
-      <input type="text" name="event_theme" placeholder="e.g. Rustic, Beach, Glamorous" required>
-      <label>Number of Guests</label>
-      <input type="number" name="guest_count" required>
-      <label>Preferred Event Date</label>
-      <input type="date" name="event_date" required>
-      <label>Event Duration</label>
-      <select name="event_duration" 
-        <option value="">Select...</option>
-        <option>Half Day</option>
-        <option>Full Day</option>
-        <option>Multi-Day</option>
-      </select>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2 class="section-title">About Royal Events Kenya</h2>
+    <p style="max-width: 800px; margin: auto; text-align: center;">
+      We are passionate about creating unforgettable moments across Kenya — whether it's a wedding, corporate event, or private party.
+    </p>
+  </section>
 
-      <label>Event Location</label>
-      <input type="text" name="event_location" placeholder="Venue address or general location" required>
+  <!-- BLOG PREVIEW -->
+  <section id="blog">
+    <h2 class="section-title">Latest Blog Posts</h2>
+    <p style="text-align: center;">Coming soon...</p>
+  </section>
 
- <h3>🛠️ Services Needed</h3>
-      <p>Select all that apply:</p>
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 5px;">
-        <label><input type="checkbox" name="services[]" value="Planning"> Event Planning & Coordination</label>
-        <label><input type="checkbox" name="services[]" value="Venue"> Venue Sourcing</label>
-        <label><input type="checkbox" name="services[]" value="Catering"> Catering Services</label>
-        <label><input type="checkbox" name="services[]" value="Decor"> Decoration & Setup</label>
-        <label><input type="checkbox" name="services[]" value="Photography"> Photography & Videography</label>
-        <label><input type="checkbox" name="services[]" value="Sound"> Sound & Lighting</label>
-        <label><input type="checkbox" name="services[]" value="Entertainment"> Entertainment (DJ, MC)</label>
-        <label><input type="checkbox" name="services[]" value="Transport"> Transport & Logistics</label>
-        <label><input type="checkbox" name="services[]" value="Branding"> Branding / Printing</label>
-        <label><input type="checkbox" name="services[]" value="Other"> Other</label>
-      </div>
+  <!-- CONTACT PREVIEW -->
+  <section id="contact">
+    <h2 class="section-title">Get in Touch</h2>
+    <p style="text-align: center;">📞 +254 797 859 232 &nbsp; | &nbsp; ✉️ royaleventscompany.co.ke@gmail.com</p>
+  </section>
 
-        <label style="margin-top: 10px;">Estimated Budget (KES)</label>
-      <input type="number" name="budget" placeholder="e.g. 100000" style="width: 100%; padding: 10px; margin: 8px 0;">
-
-      <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
-      <input type="hidden" name="_subject" value="New Contact Form Submission">
-     
-      <button type="submit">Send</button>
-    </form>
-    <p style="text-align:center; margin-top:20px;">
-  📞 Call us: +254 797 859 232<br>
-  ✉️ Email: royaleventscompany.co.ke@gmail.com
-</p>
-  </section>  <section id="about">
-    <h2 class="section-title">About Us</h2>
-    <div class="about-section">
-      <div class="about-card">
-        <h3>Our Mission</h3>
-        <p>To provide exceptional event planning and management services that exceed our clients’ expectations, turning their visions into memorable experiences.</p>
-      </div>
-      <div class="about-card">
-        <h3>Our Vision</h3>
-        <p>To be the leading event management company in Kenya and beyond, renowned for creativity, professionalism, and customer satisfaction.</p>
-      </div>
-    </div>
-  </section>  <footer>
+  <footer>
     <p>&copy; 2025 Royal Events Kenya. All Rights Reserved.</p>
   </footer>
 </body>
-</html>                                                                  
+</html>
