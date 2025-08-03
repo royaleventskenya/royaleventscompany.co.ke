@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Royal Events Kenya</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<!-- Lightbox2 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css" rel="stylesheet">
   <style>
     .gallery-grid {
   display: grid;
@@ -203,15 +206,27 @@
   </section>
 
   <!-- Gallery Placeholder -->
- <section>
+  <section>
   <h2 class="section-title">Gallery</h2>
   <div class="gallery-grid">
-    <img src="https://images.pexels.com/photos/29713178/pexels-photo-29713178.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=600" alt="Brides maid">
-    <img src="https://images.pexels.com/photos/19365954/pexels-photo-19365954.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=600" alt="Couple">
-    <img src="https://images.pexels.com/photos/17024548/pexels-photo-17024548.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=600" alt="Baby shower">
-    <img src="https://images.pexels.com/photos/19580009/pexels-photo-19580009.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=600" alt="Graduation party">
-    <img src="https://images.pexels.com/photos/17796/christmas-xmas-gifts-presents.jpg?auto=compress&cs=tinysrgb&dpr=2&h=600" alt="Gift wrap">
-    <img src="https://images.pexels.com/photos/12020465/pexels-photo-12020465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=600" alt="Catering services">
+    <a href="https://images.pexels.com/photos/29713178/pexels-photo-29713178.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000" data-lightbox="gallery" Brides maid="Brides maid">
+      <img src="https://images.pexels.com/photos/29713178/pexels-photo-29713178.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=600" alt="Brides maid">
+    </a>
+    <a href="https://images.pexels.com/photos/19365954/pexels-photo-19365954.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000" data-lightbox="gallery" Couple="Couple">
+      <img src="https://images.pexels.com/photos/19365954/pexels-photo-19365954.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=600" alt="Couple">
+    </a>
+    <a href="https://images.pexels.com/photos/17024548/pexels-photo-17024548.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000" data-lightbox="gallery" Baby shower="Baby shower">
+      <img src="https://images.pexels.com/photos/17024548/pexels-photo-17024548.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=600" alt="Baby shower">
+    </a>
+    <a href="https://images.pexels.com/photos/19580009/pexels-photo-19580009.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000" data-lightbox="gallery" Graduation party="Graduation party">
+      <img src="https://images.pexels.com/photos/19580009/pexels-photo-19580009.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=600" alt="Graduation party">
+    </a>
+    <a href="https://images.pexels.com/photos/17796/christmas-xmas-gifts-presents.jpg?auto=compress&cs=tinysrgb&dpr=2&h=1000" data-lightbox="gallery" Gift wrap="Gift wrap">
+      <img src="https://images.pexels.com/photos/17796/christmas-xmas-gifts-presents.jpg?auto=compress&cs=tinysrgb&dpr=2&h=600" alt="Gift wrap">
+    </a>
+    <a href="https://images.pexels.com/photos/12020465/pexels-photo-12020465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000" data-lightbox="gallery" Catering services="Catering services">
+      <img src="https://images.pexels.com/photos/12020465/pexels-photo-12020465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=600" alt="Catering services">
+    </a>
   </div>
 </section>
 
@@ -333,5 +348,7 @@
 
     setInterval(showNextSlide, 4000);
   </script>
+  <!-- Lightbox2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox.min.js"></script>
 </body>
 </html>
