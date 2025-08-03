@@ -29,6 +29,74 @@
 .nav-links {
   display: flex;
   gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ffe4ed;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #ff4081;
+    padding: 1rem 2rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+ 
+   nav {
+  background: #ff4081;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+ .nav-links {
+  transition: all 0.3s ease-in-out;
+}
+   
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
 }
 
 .nav-links a {
@@ -241,16 +309,16 @@
 <!-- Navigation Bar -->
 <nav>
   <div class="nav-logo">Royal Events</div>
-  <div class="hamburger" onclick="toggleMenu()">☰</div>
-  <div class="nav-links" id="navLinks">
-    <a href="#home">Home</a>
-    <a href="#our services">Our Services</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#testimonials">Testimonials</a>
-    <a href="#our blog">Our Blog</a>
-    <a href="#contact Us">Contact Us</a>
-    <a href="#about us">About Us</a>
-  </div>
+  <button class="hamburger" aria-label="Toggle navigation" onclick="toggleMenu()">☰</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#our services">Our Services</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#testimonials">Testimonials</a></li>
+    <li><a href="#our blog">Our Blog</a></li>
+    <li><a href="#contact Us">Contact Us</a></li>
+    <li><a href="#about us">About Us</a></li>
+  </ul>
 </nav>
 
   <!-- Hero / Slideshow -->
