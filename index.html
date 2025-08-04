@@ -589,8 +589,16 @@ a:hover {
       <label>Estimated Budget (KES)</label>
       <input type="number" name="budget" placeholder="e.g. 100000">
 
-      <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
-      <input type="hidden" name="_subject" value="New Contact Form Submission">
+    <!-- 🛡️ Honeypot Anti-Spam Field (hidden to users) -->
+<div style="display:none;">
+  <input type="text" name="_honey" tabindex="-1" autocomplete="off">
+</div>
+
+<!-- ✅ Redirect After Submission -->
+<input type="hidden" name="_next" value="https://royaleventskenya.github.io/thank-you.html">
+
+<!-- ✅ Subject for Email -->
+<input type="hidden" name="_subject" value="New Contact Form Submission">
 
       <button type="submit">Send</button>
     </form>
