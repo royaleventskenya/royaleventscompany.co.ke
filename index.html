@@ -9,6 +9,63 @@
 <!-- Lightbox2 CSS -->
 <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css" rel="stylesheet">
   <style>
+    .blog {
+  padding: 60px 20px;
+  background-color: #FAF9F6;
+}
+
+.blog .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-family: 'Playfair Display', serif;
+  color: #333;
+}
+
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.blog-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #cc3366;
+}
+
+.blog-card a {
+  text-decoration: none;
+  color: #cc3366;
+}
+
+.blog-card p {
+  color: #555;
+  font-size: 1rem;
+}
+
+.blog-card ul {
+  margin-top: 10px;
+  padding-left: 20px;
+  color: #333;
+}
+
+.blog-card ul li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
     /* ======== NEW ROYAL EVENTS KENYA COLOR SCHEME ======== */
 
 body {
@@ -523,49 +580,59 @@ a:hover {
     </div>
   </section>
 
-  <!-- Blog -->
-  <section class="blog" id="blog">
-    <h2 class="section-title">Our Blog</h2>
-    <div class="blog-posts">
-      <div class="blog-post"><h3><a href="blog/post1.html">Top 5 Event Planning Tips</a></h3><p>Discover essential tips to make your next event a success.</p></div>
-      <div class="blog-post"><h3><a href="blog/post2.html">Trends in Event Decor 2025</a></h3><p>Explore this year's hottest event styling and decor ideas.</p></div>
-  <!-- Blog Post 1 -->
-<div class="blog-box">
-  <div class="blog-details">
-    <h3>Top 10 Wedding Venues in Nairobi</h3>
-    <p>Planning a wedding in Nairobi? You’re in for a treat. The city offers some of the most beautiful, romantic, and versatile venues in Kenya.</p>
-    <ul>
-      <li><strong>Fairmont The Norfolk:</strong> A timeless classic with elegant spaces and lush gardens.</li>
-      <li><strong>Nairobi Serena Hotel:</strong> Sophisticated blend of culture, gardens, and five-star service.</li>
-      <li><strong>The Giraffe Manor:</strong> Magical and intimate weddings with giraffes roaming nearby.</li>
-      <li><strong>Safari Park Hotel:</strong> Expansive gardens and African-themed architecture.</li>
-      <li><strong>The Lord Erroll:</strong> French-style gardens and luxury ambiance in Runda.</li>
-      <li><strong>Karen Blixen Museum Grounds:</strong> Peaceful colonial garden setting.</li>
-      <li><strong>Windsor Golf Hotel & Country Club:</strong> Golf greens and serene landscapes.</li>
-      <li><strong>Villa Rosa Kempinski:</strong> Glamorous ballrooms and luxurious settings.</li>
-      <li><strong>Enashipai Resort & Spa:</strong> Lakeside destination wedding spot in Naivasha.</li>
-      <li><strong>Brackenhurst (Limuru):</strong> Forested escape perfect for nature lovers.</li>
-    </ul>
-</div>
+<!-- Blog -->
+<section class="blog" id="blog">
+  <h2 class="section-title">Our Blog</h2>
+  <div class="blog-container">
 
-<!-- Blog Post 2 -->
-<div class="blog-box">
-  <div class="blog-details">
-    <h3>How to Plan a Corporate Event on a Budget</h3>
-    <p>Hosting a successful corporate event doesn’t mean blowing your budget. With the right planning, you can make it impactful and cost-effective.</p>
-    <ul>
-      <li><strong>Set Clear Objectives:</strong> Know your goals — networking, product launch, training, etc.</li>
-      <li><strong>Choose a Budget-Friendly Venue:</strong> Co-working spaces or company grounds work great.</li>
-      <li><strong>Use Tech for Invitations:</strong> Email or WhatsApp groups save on printing.</li>
-      <li><strong>Limit Catering Costs:</strong> Go buffet-style or snack bars instead of plated meals.</li>
-      <li><strong>Seek Sponsorships:</strong> Collaborate with brands to reduce costs.</li>
-      <li><strong>Simple DIY Decor:</strong> Keep it classy and minimal with in-house styling.</li>
-      <li><strong>Track Every Shilling:</strong> Use spreadsheets or budgeting apps to avoid surprises.</li>
-    </ul>
-</div>
+    <!-- Blog Post 1 -->
+    <div class="blog-card">
+      <h3><a href="blog/post1.html">Top 5 Event Planning Tips</a></h3>
+      <p>Discover essential tips to make your next event a success.</p>
+    </div>
+
+    <!-- Blog Post 2 -->
+    <div class="blog-card">
+      <h3><a href="blog/post2.html">Trends in Event Decor 2025</a></h3>
+      <p>Explore this year's hottest event styling and decor ideas.</p>
+    </div>
+
+    <!-- Blog Post 3 -->
+    <div class="blog-card">
+      <h3>Top 10 Wedding Venues in Nairobi</h3>
+      <p>Planning a wedding in Nairobi? You’re in for a treat. The city offers some of the most beautiful, romantic, and versatile venues in Kenya.</p>
+      <ul>
+        <li><strong>Fairmont The Norfolk:</strong> A timeless classic with elegant spaces and lush gardens.</li>
+        <li><strong>Nairobi Serena Hotel:</strong> Sophisticated blend of culture, gardens, and five-star service.</li>
+        <li><strong>The Giraffe Manor:</strong> Magical and intimate weddings with giraffes roaming nearby.</li>
+        <li><strong>Safari Park Hotel:</strong> Expansive gardens and African-themed architecture.</li>
+        <li><strong>The Lord Erroll:</strong> French-style gardens and luxury ambiance in Runda.</li>
+        <li><strong>Karen Blixen Museum Grounds:</strong> Peaceful colonial garden setting.</li>
+        <li><strong>Windsor Golf Hotel & Country Club:</strong> Golf greens and serene landscapes.</li>
+        <li><strong>Villa Rosa Kempinski:</strong> Glamorous ballrooms and luxurious settings.</li>
+        <li><strong>Enashipai Resort & Spa:</strong> Lakeside destination wedding spot in Naivasha.</li>
+        <li><strong>Brackenhurst (Limuru):</strong> Forested escape perfect for nature lovers.</li>
+      </ul>
+    </div>
+
+    <!-- Blog Post 4 -->
+    <div class="blog-card">
+      <h3>How to Plan a Corporate Event on a Budget</h3>
+      <p>Hosting a successful corporate event doesn’t mean blowing your budget. With the right planning, you can make it impactful and cost-effective.</p>
+      <ul>
+        <li><strong>Set Clear Objectives:</strong> Know your goals — networking, product launch, training, etc.</li>
+        <li><strong>Choose a Budget-Friendly Venue:</strong> Co-working spaces or company grounds work great.</li>
+        <li><strong>Use Tech for Invitations:</strong> Email or WhatsApp groups save on printing.</li>
+        <li><strong>Limit Catering Costs:</strong> Go buffet-style or snack bars instead of plated meals.</li>
+        <li><strong>Seek Sponsorships:</strong> Collaborate with brands to reduce costs.</li>
+        <li><strong>Simple DIY Decor:</strong> Keep it classy and minimal with in-house styling.</li>
+        <li><strong>Track Every Shilling:</strong> Use spreadsheets or budgeting apps to avoid surprises.</li>
+      </ul>
+    </div>
 
   </div>
 </section>
+
   <!-- Contact -->
   <section class="contact-section" id="contact">
     <h2 class="section-title">Contact Us</h2>
