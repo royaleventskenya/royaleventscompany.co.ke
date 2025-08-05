@@ -17,6 +17,3 @@
     document.getElementById("navLinks").classList.toggle("active");
   }
 </script>
-
-
-Copied from: Editing royaleventscompany.co.ke/index.html at main · royaleventskenya/royaleventscompany.co.ke - <https://github.com/royaleventskenya/royaleventscompany.co.ke/edit/main/index.html>
