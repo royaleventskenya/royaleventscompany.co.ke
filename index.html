@@ -9,6 +9,40 @@
 <!-- Lightbox2 CSS -->
 <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css" rel="stylesheet">
   <style>
+    .service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.service-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid #e0e0e0;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.service-card:hover {
+  background-color: #f8f4fc;
+  border-color: #8B00B3;
+}
+
+.service-card input[type="checkbox"] {
+  accent-color: #8B00B3;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin: 0;
+}
     :root {
   --primary-color: #F77FBF;
   --secondary-color: #D4AF37;
@@ -582,22 +616,60 @@ a:hover {
       <label>Event Location</label>
       <input type="text" name="event_location" placeholder="Venue address or general location" required>
 
-      <h3>🛠️ Services Needed</h3>
-      <p>Select all that apply:</p>
-      <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 5px;">
-        <label><input type="checkbox" name="services[]" value="Planning"> Event Planning & Coordination</label>
-        <label><input type="checkbox" name="services[]" value="Venue"> Venue Sourcing</label>
-        <label><input type="checkbox" name="services[]" value="Catering"> Catering Services</label>
-        <label><input type="checkbox" name="services[]" value="Decor"> Decoration & Setup</label>
-        <label><input type="checkbox" name="services[]" value="Photography"> Photography & Videography</label>
-        <label><input type="checkbox" name="services[]" value="Sound"> Sound & Lighting</label>
-        <label><input type="checkbox" name="services[]" value="Entertainment"> Entertainment (DJ, MC)</label>
-        <label><input type="checkbox" name="services[]" value="Transport"> Transport & Logistics</label>
-        <label><input type="checkbox" name="services[]" value="Branding"> Branding / Printing</label>
-        <label><input type="checkbox" name="services[]" value="Other"> Other</label>
-      </div>
+    <h3>🛠️ Services Needed</h3>
+<p>Select all that apply:</p>
+<div class="service-cards">
+  <label class="service-card">
+    <input type="checkbox" name="services[]" value="Planning">
+    <span>🎯 Event Planning & Coordination</span>
+  </label>
 
-      
+  <label class="service-card">
+    <input type="checkbox" name="services[]" value="Venue">
+    <span>🏛️ Venue Sourcing</span>
+  </label>
+
+  <label class="service-card">
+    <input type="checkbox" name="services[]" value="Catering">
+    <span>🍽️ Catering Services</span>
+  </label>
+
+  <label class="service-card">
+    <input type="checkbox" name="services[]" value="Decor">
+    <span>🎀 Decoration & Setup</span>
+  </label>
+
+  <label class="service-card">
+    <input type="checkbox" name="services[]" value="Photography">
+    <span>📸 Photography & Videography</span>
+  </label>
+
+  <label class="service-card">
+    <input type="checkbox" name="services[]" value="Sound">
+    <span>🔊 Sound & Lighting</span>
+  </label>
+
+  <label class="service-card">
+    <input type="checkbox" name="services[]" value="Entertainment">
+    <span>🎤 Entertainment (DJ, MC)</span>
+  </label>
+
+  <label class="service-card">
+    <input type="checkbox" name="services[]" value="Transport">
+    <span>🚐 Transport & Logistics</span>
+  </label>
+
+  <label class="service-card">
+    <input type="checkbox" name="services[]" value="Branding">
+    <span>🖨️ Branding / Printing</span>
+  </label>
+
+  <label class="service-card">
+    <input type="checkbox" name="services[]" value="Other">
+    <span>✨ Other</span>
+  </label>
+</div>
+     
       <label>Estimated Budget (KES)</label>
       <input type="number" name="budget" placeholder="e.g. 100000">
 
