@@ -86,7 +86,7 @@ a:hover {
 }
 
    nav {
-  background: #ff4081;
+  background: #FFD700;
   color: white;
   padding: 1rem 2rem;
   display: flex;
@@ -136,7 +136,7 @@ a:hover {
     left: 0;
     width: 100%;
     flex-direction: column;
-    background-color: #ff4081;
+    background-color: #FFD700;
     padding: 1rem 2rem;
   }
 
@@ -150,7 +150,7 @@ a:hover {
 }
  
    nav {
-  background: #ff4081;
+  background: #FFD700;
   color: white;
   padding: 1rem 2rem;
   display: flex;
@@ -200,7 +200,7 @@ a:hover {
     left: 0;
     width: 100%;
     flex-direction: column;
-    background-color: #ff4081;
+    background-color: #FFD700;
     padding: 1rem 2rem;
   }
 
@@ -380,7 +380,7 @@ a:hover {
       }
     }
     nav {
-  background: #ff4081;
+  background: #FFD700;
   color: white;
   padding: 1rem 2rem;
   display: flex;
@@ -427,7 +427,7 @@ a:hover {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #ff4081;
+    background-color: #FFD700;
     position: absolute;
     top: 70px;
     left: 0;
