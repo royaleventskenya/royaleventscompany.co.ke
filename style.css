@@ -150,7 +150,7 @@ a:hover {
 }
  
    nav {
-  background: #FFD700;
+  background: #FFD700; /* Warm gold */
   color: white;
   padding: 1rem 2rem;
   display: flex;
@@ -164,43 +164,44 @@ a:hover {
 .nav-logo {
   font-size: 1.8rem;
   font-weight: bold;
+  font-family: 'Playfair Display', serif;
 }
 
- .nav-links {
-  transition: all 0.3s ease-in-out;
-}
-   
 .nav-links {
   display: flex;
   gap: 1.5rem;
+  list-style: none;
 }
 
-.nav-links a {
+.nav-links li a {
   color: white;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
 }
 
-.nav-links a:hover {
-  color: #ffe4ed;
+.nav-links li a:hover {
+  color: #cfa100; /* darker gold hover */
 }
 
 .hamburger {
   display: none;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
   cursor: pointer;
 }
 
 @media (max-width: 768px) {
   .nav-links {
     display: none;
+    flex-direction: column;
+    background-color: #FFD700; /* gold for mobile too */
     position: absolute;
     top: 70px;
     left: 0;
     width: 100%;
-    flex-direction: column;
-    background-color: #FFD700;
     padding: 1rem 2rem;
   }
 
