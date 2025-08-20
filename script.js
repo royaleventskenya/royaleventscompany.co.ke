@@ -1,3 +1,19 @@
+// Hamburger menu toggle
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
+
+// Close menu after clicking a link
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+  });
+});
+</script>
+
 <script>
     let slides = document.querySelectorAll(".slide");
     let index = 0;
@@ -23,18 +39,3 @@
   menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
   });
-// Hamburger menu toggle
-const menuToggle = document.querySelector('.menu-toggle');
-const navMenu = document.querySelector('.nav-links');
-
-menuToggle.addEventListener('click', () => {
-  navMenu.classList.toggle('active');
-});
-
-// Close menu after clicking a link
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    navMenu.classList.remove('active');
-  });
-});
-</script>
