@@ -1,4 +1,36 @@
+/* Default state (hidden on mobile) */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  background: white;
+  position: absolute;
+  top: 60px; /* adjust based on nav height */
+  right: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+}
 
+/* When active (menu open) */
+.nav-links.active {
+  display: flex;
+}
+
+/* Show full nav on larger screens */
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+  }
+  .menu-toggle {
+    display: none;
+  }
+}
 :root {
   --primary-color: #D4AF37; /* gold */
   --background-color: #FAF9F6;
