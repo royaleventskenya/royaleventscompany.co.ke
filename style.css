@@ -463,4 +463,69 @@ a:hover {
   line-height: 1.6;
   color: #555;
 }
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: var(--secondary-color, #D4AF37); /* gold */
+  position: relative;
+}
+
+/* Logo styling */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Nav links desktop */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Hamburger icon */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    background: var(--secondary-color, #D4AF37);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    overflow: hidden;
+
+    /* animation setup */
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .nav-links.active {
+    max-height: 500px; /* large enough to fit links */
+    opacity: 1;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
   </style>
