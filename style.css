@@ -96,59 +96,10 @@ a:hover {
   top: 0;
   z-index: 1000;
 }
-
 .nav-logo {
   font-size: 1.8rem;
   font-weight: bold;
 }
-
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-}
-
-.nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.nav-links li a:hover {
-  color: #ffe4ed;
-}
-
-.hamburger {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    flex-direction: column;
-    background-color: #FFD700;
-    padding: 1rem 2rem;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}
- 
    nav {
   background: #FFD700; /* Warm gold */
   color: white;
@@ -166,54 +117,6 @@ a:hover {
   font-weight: bold;
   font-family: 'Playfair Display', serif;
 }
-
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-}
-
-.nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  font-family: 'Poppins', sans-serif;
-}
-
-.nav-links li a:hover {
-  color: #cfa100; /* darker gold hover */
-}
-
-.hamburger {
-  display: none;
-  font-size: 1.8rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #FFD700; /* gold for mobile too */
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    padding: 1rem 2rem;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}
- 
     .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -370,16 +273,6 @@ a:hover {
       color: #fff;
       padding: 20px;
     }
-
-    @media (max-width: 768px) {
-      .header-content h1 {
-        font-size: 2rem;
-      }
-
-      .header-content p {
-        font-size: 1rem;
-      }
-    }
     nav {
   background: #FFD700;
   color: white;
@@ -398,52 +291,7 @@ a:hover {
   font-family: 'Playfair Display', serif;
 }
 
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-}
 
-.nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  font-family: 'Poppins', sans-serif;
-}
-
-.nav-links li a:hover {
-  color: #ffe4ed;
-}
-
-.hamburger {
-  display: none;
-  font-size: 1.8rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #FFD700;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    padding: 1rem 2rem;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}
 .hero-text {
   text-align: center;
   max-width: 800px;
@@ -480,51 +328,3 @@ a:hover {
   color: #fff;
 }
 
-/* Nav links desktop */
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links li a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-}
-
-/* Hamburger icon */
-.menu-toggle {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  color: #fff;
-}
-
-/* Mobile styles */
-@media (max-width: 768px) {
-  .nav-links {
-    display: flex;
-    flex-direction: column;
-    background: var(--secondary-color, #D4AF37);
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 200px;
-    overflow: hidden;
-
-    /* animation setup */
-    max-height: 0;
-    opacity: 0;
-    transition: all 0.4s ease-in-out;
-  }
-
-  .nav-links.active {
-    max-height: 500px; /* large enough to fit links */
-    opacity: 1;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-}
