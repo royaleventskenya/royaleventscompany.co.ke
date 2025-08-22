@@ -91,22 +91,6 @@ body {
   margin: 0;
   padding: 0;
 }
-
-.navbar {
-  background-color: #D4AF37; /* Elegant gold */
-  color: white;
-}
-
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-  padding: 15px;
-}
-
-.navbar a:hover {
-  color: #000; /* Optional:black on hover for contrast */
-}
-
 .section-title {
   color: #6A0DAD;
   font-family: 'Poppins', sans-serif;
@@ -156,72 +140,6 @@ a {
 a:hover {
   color: #E6C067;
 }
-
-   nav {
-  background: #FFD700; /* Warm gold */
-  color: white;
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.nav-logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  font-family: 'Playfair Display', serif;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-}
-
-.nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  font-family: 'Poppins', sans-serif;
-}
-
-.nav-links li a:hover {
-  color: #cfa100; /* darker gold hover */
-}
-
-.hamburger {
-  display: none;
-  font-size: 1.8rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #FFD700; /* gold for mobile too */
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    padding: 1rem 2rem;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}
- 
     .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -378,17 +296,6 @@ a:hover {
       color: #fff;
       padding: 20px;
     }
-
-    @media (max-width: 768px) {
-      .header-content h1 {
-        font-size: 2rem;
-      }
-
-      .header-content p {
-        font-size: 1rem;
-      }
-    }
-    
   </style>
 </head>
 <body>
