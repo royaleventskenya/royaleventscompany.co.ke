@@ -63,31 +63,48 @@ body {
   .nav-links {
     display: flex;
     flex-direction: column;
-    background: #FFD700;
+    align-items: center;
+    justify-content: flex-start;
+    background: #FFD700; /* gold */
     position: absolute;
-    top: 70px;
-    right: 20px;
-    width: 200px;
-    border-radius: 8px;
-    z-index: 999;
-
-    /* animation trick */
-    max-height: 0;
+    top: 70px;  /* appear right below the navbar */
+    left: 0;
+    width: 100%;
+    z-index: 3000;
     overflow: hidden;
+    max-height: 0;       /* collapsed by default */
     transition: max-height 0.4s ease-in-out;
   }
 
   .nav-links.active {
-    max-height: 500px; /* large enough to fit links */
+    max-height: 400px; /* enough to show all links */
   }
 
   .nav-links li {
-    margin: 10px 0;
-    text-align: right;
+    margin: 12px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 600;
+  }
+
+  .nav-links a:hover {
+    background: rgba(0,0,0,0.1);
+    color: black;
   }
 
   .menu-toggle {
     display: block;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
   }
 }
 
