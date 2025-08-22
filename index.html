@@ -7,7 +7,63 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+/* === Navbar Base & Responsive Menu === */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #FFD700; /* warm gold */
+  padding: 1rem 2rem;
+  position: relative;
+}
 
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Hide toggle on desktop */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #FFD700;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
   <nav>
     <div class="logo">Royal Events Kenya</div>
     <div class="menu-toggle">☰</div>
