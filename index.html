@@ -48,23 +48,29 @@ nav {
 /* Mobile styles */
 @media (max-width: 768px) {
   .nav-links {
-    display: none;
+    display: flex;
     flex-direction: column;
     background: #FFD700;
     position: absolute;
     top: 70px;
     right: 20px;
-    width: 200%;
-    padding: 1rem;
-    border-radius:8px;
+    width: 200px;
+    border-radius: 8px;
     z-index: 999;
+
+    /* animation trick */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
   }
 
   .nav-links.active {
-    display: flex;
+    max-height: 500px; /* large enough to fit links */
   }
+
   .nav-links li {
     margin: 10px 0;
+    text-align: right;
   }
 
   .menu-toggle {
