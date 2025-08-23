@@ -563,25 +563,48 @@ a:hover {
     <p>&copy; 2025 Royal Events Kenya. All Rights Reserved.</p>
   </footer>
 <!-- Lightbox2 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox.min.js"></script>
 
-  <!-- ✅ Hamburger Toggle Script -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const menuToggle = document.querySelector('.menu-toggle');
-      const navMenu = document.querySelector('.nav-links');
+<!-- ✅ Hamburger Menu + Slideshow Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // ===== Hamburger Menu =====
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-links');
 
-      menuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-      });
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
 
-      // Close menu after clicking a link
-      document.querySelectorAll('.nav-links a').forEach(link => {
-        link.addEventListener('click', () => {
-          navMenu.classList.remove('active');
-        });
+    // Close menu after clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
       });
     });
-  </script>
+
+    // ===== Slideshow =====
+    const slides = document.querySelectorAll(".slideshow-container img");
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        if (i === index) slide.classList.add("active");
+      });
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      showSlide(currentIndex);
+    }
+
+    // Show the first slide
+    showSlide(currentIndex);
+
+    // Auto change every 5 seconds
+    setInterval(nextSlide, 5000);
+  });
+</script>
 </body>
 </html>
