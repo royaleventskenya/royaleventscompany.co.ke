@@ -114,6 +114,12 @@
   flex-shrink: 0;
   margin: 0;
 }
+    .service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-bottom: 15px;
+}
     :root {
   --primary-color: #F77FBF;
   --secondary-color: #D4AF37;
@@ -524,6 +530,8 @@ a:hover {
     <span>✨ Other</span>
   </label>
 </div>
+      <!-- Hidden input for "Other" -->
+<input type="text" name="other_service_details" id="other-details" placeholder="Please specify other service" style="display:none; margin-top:10px;">
      
       <label>Estimated Budget (KES)</label>
       <input type="number" name="budget" placeholder="e.g. 100000">
