@@ -9,20 +9,22 @@
 <!-- Lightbox2 CSS -->
 <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css" rel="stylesheet">
   <style>
-    /* === Navbar Base & Responsive Menu === *
-  nav {
+    nav {
+  background: #FFD700; /* Warm gold */
+  color: white;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #FFD700; /* warm gold */
-  padding: 1rem 2rem;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.logo {
-  font-size: 1.5rem;
+.nav-logo {
+  font-size: 1.8rem;
   font-weight: bold;
-  color: white;
+  font-family: 'Playfair Display', serif;
 }
 
 .nav-links {
@@ -31,61 +33,46 @@
   list-style: none;
 }
 
-.nav-links a {
+.nav-links li a {
   color: white;
   text-decoration: none;
   font-weight: 500;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Hide toggle on desktop */
-.menu-toggle {
+.nav-links li a:hover {
+  color: #cfa100; /* darker gold hover */
+}
+
+.hamburger {
   display: none;
-  font-size: 2rem;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
   color: white;
   cursor: pointer;
 }
-/* Mobile styles */
+
 @media (max-width: 768px) {
   .nav-links {
-    display: flex;
+    display: none;
     flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    background: #FFD700; /* gold */
+    background-color: #FFD700; /* gold for mobile too */
     position: absolute;
-    top: 70px;  /* appear right below the navbar */
+    top: 70px;
     left: 0;
     width: 100%;
-    z-index: 3000;
-    overflow: hidden;
-    max-height: 0;       /* collapsed by default */
-    transition: max-height 0.4s ease-in-out;
+    padding: 1rem 2rem;
   }
 
   .nav-links.active {
-    max-height: 400px; /* enough to show all links */
+    display: flex;
   }
 
-  .nav-links li {
-    margin: 12px 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  .nav-links a {
+  .hamburger {
     display: block;
-    width: 100%;
-    padding: 10px 0;
-    font-size: 1.2rem;
-    color: white;
-    font-weight: 600;
   }
-
-  .nav-links a:hover {
-    background: rgba(0,0,0,0.1);
-    color: black;
-  }
-
+}
   .menu-toggle {
     display: block;
     font-size: 2rem;
