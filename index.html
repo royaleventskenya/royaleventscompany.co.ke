@@ -501,6 +501,74 @@ a:hover {
   transform: translateY(-8px);
   box-shadow: 0px 12px 30px rgba(0,0,0,0.15);
 }
+    /* ==========================
+   Homepage Blog Section Styles
+   ========================== */
+
+.blog {
+  padding: 60px 20px;
+  background: #faf8fc;
+}
+
+.blog .section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #4b006e; /* Royal Purple */
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.blog .section-title::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #b68b00; /* Gold accent */
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.blog-posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.blog-post {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-post:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.12);
+}
+
+.blog-post h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.blog-post a {
+  color: #4b006e;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.blog-post a:hover {
+  color: #b68b00;
+}
+
+.blog-post p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
   </style>
 </head>
 <body>
