@@ -1,0 +1,2333 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Royal Events Kenya</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+
+
+
+<!-- Lightbox2 CSS -->
+
+<link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css" rel="stylesheet">
+
+  <style>
+
+  nav {
+
+  background: #FFD700; /* Warm gold */
+
+  color: white;
+
+  padding: 1rem 2rem;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+}
+
+ .logo {
+
+  font-family: 'Cinzel', serif;   
+
+  font-size: 2rem;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+
+
+  /* Gold gradient effect */
+
+  background: linear-gradient(90deg, #D4AF37);
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+}
+
+
+
+.nav-links {
+
+  display: flex;
+
+  gap: 1.5rem;
+
+  list-style: none;
+
+}
+
+
+
+.nav-links li a {
+
+  color: white;
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+  font-family: 'Poppins', sans-serif;
+
+}
+
+
+
+.nav-links li a:hover {
+
+  color: #cfa100; /* darker gold hover */
+
+}
+
+
+
+.hamburger {
+
+  display: none;
+
+  font-size: 1.8rem;
+
+  background: none;
+
+  border: none;
+
+  color: white;
+
+  cursor: pointer;
+
+}
+
+/* Show nav-links normally on desktop */
+
+.nav-links {
+
+  display: flex;
+
+  gap: 1.5rem;
+
+  list-style: none;
+
+}
+
+
+
+/* Hide menu toggle (☰) on desktop by default */
+
+.menu-toggle {
+
+  display: none;
+
+  font-size: 2rem;
+
+  color: white;
+
+  cursor: pointer;
+
+}
+
+/* Mobile styles */
+
+@media (max-width: 768px) {
+
+  .nav-links {
+
+    display: none;
+
+    flex-direction: column;
+
+    background-color: #FFD700; /* gold for mobile too */
+
+    position: absolute;
+
+    top: 70px;
+
+    left: 0;
+
+    width: 100%;
+
+    padding: 1rem 2rem;
+
+  }
+
+
+
+  .nav-links.active {
+
+    display: flex;
+
+  }
+
+
+
+  .menu-toggle {
+
+    display: block; /* Only show on mobile */
+
+  }
+
+}
+
+.service-card {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  border: 2px solid #e0e0e0;
+
+  padding: 12px 16px;
+
+  border-radius: 10px;
+
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 15px;
+
+  background-color: #fff;
+
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+
+}
+
+
+
+.service-card:hover {
+
+  background-color: #f8f4fc;
+
+  border-color: #8B00B3;
+
+}
+
+
+
+.service-card input[type="checkbox"] {
+
+  accent-color: #8B00B3;
+
+  width: 18px;
+
+  height: 18px;
+
+  flex-shrink: 0;
+
+  margin: 0;
+
+}
+
+    .service-cards {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 15px;
+
+  margin-bottom: 15px;
+
+}
+
+    :root {
+
+  --primary-color: #F77FBF;
+
+  --secondary-color: #D4AF37;
+
+  --background-color: #FAF9F6;
+
+  --text-color: #333333;
+
+  --cta-color: #3D0066;
+
+  --accent-color: #FFE4EC;
+
+  --light-grey: #E0E0E0;
+
+  --font-heading: 'Playfair Display', serif;
+
+  --font-body: 'Poppins', sans-serif;
+
+}
+
+    /* ======== NEW ROYAL EVENTS KENYA COLOR SCHEME ======== */
+
+
+
+body {
+
+  background-color: #FAF9F6; /* Soft ivory */
+
+  font-family: 'Poppins', sans-serif;
+
+  color: #2C2C2C;
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+.section-title {
+
+  color: #6A0DAD;
+
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 2.5rem;
+
+}
+
+
+
+button, .btn {
+
+  background-color: #E6C067; /* Gold */
+
+  color: #2C2C2C;
+
+  border: none;
+
+  padding: 12px 24px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+
+}
+
+
+
+button:hover, .btn:hover {
+
+  background-color: #F7C6D9; /* Blush pink */
+
+  color: #2C2C2C;
+
+}
+
+
+
+.service-card {
+
+  background-color: white;
+
+  border: 1px solid #E6C067;
+
+  border-radius: 12px;
+
+  padding: 20px;
+
+  box-shadow: 0 5px 10px rgba(106, 13, 173, 0.1);
+
+  transition: transform 0.3s ease;
+
+}
+
+
+
+.service-card:hover {
+
+  transform: translateY(-5px);
+
+}
+
+
+
+.footer {
+
+  background-color: #1F1F1F;
+
+  color: #E6C067;
+
+  text-align: center;
+
+  padding: 20px;
+
+}
+
+
+
+a {
+
+  color: #6A0DAD;
+
+  text-decoration: none;
+
+}
+
+
+
+a:hover {
+
+  color: #E6C067;
+
+}
+
+    .gallery-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 20px;
+
+  padding: 0 20px;
+
+}
+
+
+
+.gallery-grid img {
+
+  width: 100%;
+
+  height: 250px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+
+
+.gallery-grid img:hover {
+
+  transform: scale(1.03);
+
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+
+}
+
+
+
+    * {
+
+      margin: 0;
+
+      padding: 0;
+
+      box-sizing: border-box;
+
+    }
+
+
+
+    body {
+
+      font-family: 'Poppins', sans-serif;
+
+      line-height: 1.6;
+
+      color: #333;
+
+    }
+
+
+
+    header, section, footer {
+
+      padding: 60px 20px;
+
+      max-width: 1200px;
+
+      margin: auto;
+
+    }
+
+
+
+    .slideshow-container {
+
+      position: relative;
+
+      width: 100%;
+
+      height: 100vh;
+
+      overflow: hidden;
+
+    }
+
+
+
+    .slideshow-container img {
+
+      width: 100%;
+
+      height: 100vh;
+
+      object-fit: cover;
+
+      position: absolute;
+
+      top: 0;
+
+      left: 0;
+
+      opacity: 0;
+
+      transition: opacity 1.5s ease-in-out;
+
+    }
+
+
+
+    .slideshow-container img.active {
+
+      opacity: 1;
+
+    }
+
+
+
+    .header-content {
+
+      position: absolute;
+
+      top: 0;
+
+      left: 0;
+
+      z-index: 2;
+
+      width: 100%;
+
+      height: 100%;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+
+      align-items: center;
+
+      text-align: center;
+
+      color: white;
+
+      background: rgba(0, 0, 0, 0.5);
+
+      padding: 20px;
+
+    }
+
+
+
+    .header-content h1 {
+
+      font-family: 'Playfair Display', serif;
+
+      font-size: 3rem;
+
+      margin-bottom: 10px;
+
+    }
+
+
+
+    .header-content p {
+
+      font-size: 1.2rem;
+
+      margin-bottom: 30px;
+
+    }
+
+
+
+    .header-content a {
+
+      padding: 12px 30px;
+
+      background: gold;
+
+      color: #000;
+
+      text-decoration: none;
+
+      font-weight: 600;
+
+      border-radius: 30px;
+
+      transition: background 0.3s;
+
+    }
+
+
+
+    .header-content a:hover {
+
+      background: #cfa100;
+
+    }
+
+
+
+    .section-title {
+
+      font-size: 2rem;
+
+      text-align: center;
+
+      margin-bottom: 40px;
+
+      color: #444;
+
+    }
+
+
+
+    .services, .about-section, .testimonials, .blog-posts {
+
+      display: grid;
+
+      gap: 20px;
+
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    }
+
+
+
+    .service-card, .testimonial-card, .about-card, .blog-post {
+
+      background: #f9f9f9;
+
+      padding: 20px;
+
+      border-radius: 10px;
+
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+
+    }
+
+
+
+    form {
+
+      display: grid;
+
+      gap: 15px;
+
+      background: #f5f5f5;
+
+      padding: 30px;
+
+      border-radius: 10px;
+
+    }
+
+
+
+    input, select, textarea, button {
+
+      padding: 10px;
+
+      font-size: 1rem;
+
+      width: 100%;
+
+      border: 1px solid #ccc;
+
+      border-radius: 5px;
+
+    }
+
+
+
+    button {
+
+      background: gold;
+
+      color: black;
+
+      font-weight: bold;
+
+      border: none;
+
+      cursor: pointer;
+
+    }
+
+
+
+    button:hover {
+
+      background: #cfa100;
+
+    }
+
+
+
+    footer {
+
+      text-align: center;
+
+      background: #222;
+
+      color: #fff;
+
+      padding: 20px;
+
+    }
+
+  /* Hero Tagline Styling */
+
+.hero-text {
+
+  text-align: center;
+
+  padding: 80px 20px;
+
+  background: linear-gradient(135deg, #3D0066, #D4AF37); /* royal purple to gold */
+
+  color: #fff;
+
+  border-radius: 12px;
+
+  margin: 40px auto;
+
+  max-width: 1000px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+}
+
+.tagline-title {
+
+  font-family: 'Playful Display', serif;
+
+  font-size: 2.7rem; /* desktop default */
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  background: linear-gradient(90deg, #FFD700, #CFA100);
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  margin-bottom: 12px;
+
+}
+
+
+
+.tagline-subtitle {
+
+  font-family: 'Poppins', sans-serif;
+
+  font-size: 1rem; /* desktop default */
+
+  font-weight: 300;
+
+  color: #f8f8f8;
+
+  max-width: 480px;
+
+  margin: 0 auto;
+
+  line-height: 1.5;
+
+  text-align: center;
+
+  opacity: 0.9;
+
+  letter-spacing: 0.3px; /* modern subtle spacing */
+
+}
+
+
+
+/* Responsive adjustments */
+
+@media (max-width: 992px) {
+
+  .tagline-title {
+
+    font-size: 2rem; /* medium screens */
+
+  }
+
+  .tagline-subtitle {
+
+    font-size: 0.95rem;
+
+  }
+
+}
+
+
+
+@media (max-width: 600px) {
+
+  .tagline-title {
+
+    font-size: 1.7rem; /* smaller but still leading */
+
+  }
+
+  .tagline-subtitle {
+
+    font-size: 0.9rem; /* stays smaller than title */
+
+    line-height: 1.4;
+
+  }
+
+}
+
+    /* --- BLOG GRID --- */
+
+.blog-posts {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 20px;
+
+}
+
+
+
+.blog-post {
+
+  background: #fff;
+
+  padding: 20px;
+
+  border-radius: 12px;
+
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+  transition: transform 0.3s ease;
+
+}
+
+
+
+.blog-post:hover {
+
+  transform: translateY(-5px);
+
+}
+
+
+
+.blog-post h3 a {
+
+  color: var(--secondary-color); /* gold */
+
+  text-decoration: none;
+
+}
+
+
+
+.blog-post h3 a:hover {
+
+  color: var(--primary-color); /* purple */
+
+}
+
+
+
+/* --- TESTIMONIALS GRID --- */
+
+.testimonials {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 20px;
+
+}
+
+
+
+.testimonial-card {
+
+  background: #fff;
+
+  padding: 20px;
+
+  border-left: 5px solid var(--secondary-color);
+
+  border-radius: 10px;
+
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+  font-style: italic;
+
+}
+
+
+
+.testimonial-card strong {
+
+  display: block;
+
+  margin-top: 10px;
+
+  color: var(--primary-color);
+
+  font-style: normal;
+
+}
+
+    /* About Section */
+
+.about {
+
+  padding: 80px 20px;
+
+  background: var(--background-color);
+
+  text-align: center;
+
+}
+
+
+
+.about .section-title {
+
+  font-size: 2.2rem;
+
+  margin-bottom: 40px;
+
+  color: var(--cta-color);
+
+  font-family: 'Cinzel', serif;
+
+}
+
+
+
+.about-section {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 30px;
+
+  max-width: 1000px;
+
+  margin: 0 auto;
+
+}
+
+
+
+.about-card {
+
+  background: #fff;
+
+  border-radius: 15px;
+
+  padding: 30px;
+
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.1);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+
+
+.about-card h3 {
+
+  font-size: 1.5rem;
+
+  margin-bottom: 15px;
+
+  color: var(--secondary-color);
+
+}
+
+
+
+.about-card p {
+
+  font-size: 1rem;
+
+  color: var(--text-color);
+
+  line-height: 1.6;
+
+}
+
+
+
+.about-card:hover {
+
+  transform: translateY(-8px);
+
+  box-shadow: 0px 12px 30px rgba(0,0,0,0.15);
+
+}
+
+    /* ==========================
+
+   Homepage Blog Section Styles
+
+   ========================== */
+
+
+
+.blog {
+
+  padding: 60px 20px;
+
+  background: #faf8fc;
+
+}
+
+
+
+.blog .section-title {
+
+  text-align: center;
+
+  font-size: 2rem;
+
+  color: #4b006e; /* Royal Purple */
+
+  margin-bottom: 40px;
+
+  position: relative;
+
+}
+
+
+
+.blog .section-title::after {
+
+  content: "";
+
+  display: block;
+
+  width: 80px;
+
+  height: 3px;
+
+  background: #b68b00; /* Gold accent */
+
+  margin: 10px auto 0;
+
+  border-radius: 2px;
+
+}
+
+
+
+.blog-posts {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 25px;
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+}
+
+
+
+.blog-post {
+
+  background: #fff;
+
+  padding: 25px;
+
+  border-radius: 12px;
+
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+
+
+.blog-post:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.12);
+
+}
+
+
+
+.blog-post h3 {
+
+  font-size: 1.3rem;
+
+  margin-bottom: 10px;
+
+}
+
+
+
+.blog-post a {
+
+  color: #4b006e;
+
+  text-decoration: none;
+
+  transition: color 0.3s;
+
+}
+
+
+
+.blog-post a:hover {
+
+  color: #b68b00;
+
+}
+
+
+
+.blog-post p {
+
+  font-size: 0.95rem;
+
+  color: #555;
+
+  line-height: 1.5;
+
+  }
+
+    :root {
+
+  --royal-purple: #3D0066;
+
+  --royal-gold: #D4AF37;
+
+  --ivory: #FAF9F6;
+
+  --text-color: #2C2C2C;
+
+  --font-heading: 'Cinzel', serif;
+
+  --font-body: 'Poppins', sans-serif;
+
+}
+
+
+
+/* Navigation */
+
+nav {
+
+  background: var(--royal-purple);
+
+  color: white;
+
+  padding: 1rem 2rem;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+}
+
+
+
+.logo {
+
+  font-family: var(--font-heading);
+
+  font-size: 2rem;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  background: linear-gradient(90deg, var(--royal-gold), var(--royal-gold));
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+}
+
+
+
+.nav-links li a {
+
+  color: white;
+
+  text-decoration: none;
+
+  font-weight: bold;
+
+  font-family: var(--font-body);
+
+}
+
+
+
+.nav-links li a:hover {
+
+  color: var(--royal-gold);
+
+}
+
+
+
+.menu-toggle {
+
+  display: none;
+
+  font-size: 2rem;
+
+  color: white;
+
+  cursor: pointer;
+
+}
+
+
+
+@media (max-width: 768px) {
+
+  .nav-links {
+
+    display: none;
+
+    flex-direction: column;
+
+    background-color: var(--royal-purple);
+
+    position: absolute;
+
+    top: 70px;
+
+    left: 0;
+
+    width: 100%;
+
+    padding: 1rem 2rem;
+
+  }
+
+  .nav-links.active {
+
+    display: flex;
+
+  }
+
+  .menu-toggle {
+
+    display: block;
+
+  }
+
+}
+
+
+
+/* Body & Sections */
+
+body {
+
+  background-color: var(--ivory);
+
+  font-family: var(--font-body);
+
+  color: var(--text-color);
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+
+
+.section-title {
+
+  font-size: 2.2rem;
+
+  text-align: center;
+
+  margin-bottom: 40px;
+
+  color: var(--royal-purple);
+
+  font-family: var(--font-heading);
+
+  position: relative;
+
+}
+
+
+
+.section-title::after {
+
+  content: "";
+
+  display: block;
+
+  width: 80px;
+
+  height: 3px;
+
+  background: var(--royal-gold);
+
+  margin: 10px auto 0;
+
+  border-radius: 2px;
+
+}
+
+
+
+/* Buttons */
+
+button, .btn, .header-content a {
+
+  background-color: var(--royal-gold);
+
+  color: #000;
+
+  border: none;
+
+  padding: 12px 24px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition: background-color 0.3s ease;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+}
+
+
+
+button:hover, .btn:hover, .header-content a:hover {
+
+  background-color: var(--royal-purple);
+
+  color: #fff;
+
+}
+
+
+
+/* Service Cards */
+
+.service-card {
+
+  background-color: #fff;
+
+  border: 1px solid var(--royal-gold);
+
+  border-radius: 12px;
+
+  padding: 20px;
+
+  box-shadow: 0 5px 10px rgba(61, 0, 102, 0.1);
+
+  transition: transform 0.3s ease, border-color 0.3s ease;
+
+}
+
+
+
+.service-card:hover {
+
+  transform: translateY(-5px);
+
+  border-color: var(--royal-purple);
+
+}
+
+
+
+.service-card input[type="checkbox"] {
+
+  accent-color: var(--royal-purple);
+
+}
+
+
+
+/* Testimonials */
+
+.testimonial-card {
+
+  background: #fff;
+
+  padding: 20px;
+
+  border-left: 5px solid var(--royal-gold);
+
+  border-radius: 10px;
+
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+  font-style: italic;
+
+}
+
+
+
+.testimonial-card strong {
+
+  display: block;
+
+  margin-top: 10px;
+
+  color: var(--royal-purple);
+
+  font-style: normal;
+
+}
+
+
+
+/* Blog */
+
+.blog {
+
+  padding: 60px 20px;
+
+  background: #faf8fc;
+
+}
+
+
+
+.blog .section-title {
+
+  color: var(--royal-purple);
+
+}
+
+
+
+.blog-post h3 a {
+
+  color: var(--royal-gold);
+
+  text-decoration: none;
+
+}
+
+
+
+.blog-post h3 a:hover {
+
+  color: var(--royal-purple);
+
+}
+
+
+
+/* Hero Tagline */
+
+.hero-text {
+
+  text-align: center;
+
+  padding: 80px 20px;
+
+  background: linear-gradient(135deg, var(--royal-purple), var(--royal-gold));
+
+  color: #fff;
+
+  border-radius: 12px;
+
+  margin: 40px auto;
+
+  max-width: 1000px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+}
+
+
+
+.tagline-title {
+
+  font-family: var(--font-heading);
+
+  font-size: 2.7rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  background: linear-gradient(90deg, var(--royal-gold), var(--royal-gold));
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  margin-bottom: 12px;
+
+}
+
+
+
+.tagline-subtitle {
+
+  font-family: var(--font-body);
+
+  font-size: 1rem;
+
+  font-weight: 300;
+
+  color: #f8f8f8;
+
+  max-width: 480px;
+
+  margin: 0 auto;
+
+  line-height: 1.5;
+
+  opacity: 0.9;
+
+  text-align: center;
+
+}
+
+
+
+/* Footer */
+
+footer {
+
+  text-align: center;
+
+  background: var(--royal-purple);
+
+  color: var(--royal-gold);
+
+  padding: 20px;
+
+}
+
+    .gallery-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+
+  gap: 15px;
+
+}
+
+
+
+.gallery-item {
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-radius: 12px;
+
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+
+}
+
+
+
+.gallery-item img {
+
+  width: 100%;
+
+  display: block;
+
+  border-radius: 12px;
+
+  transition: transform 0.3s ease;
+
+}
+
+
+
+.gallery-item:hover img {
+
+  transform: scale(1.05);
+
+}
+
+
+
+.caption {
+
+  position: absolute;
+
+  bottom: 0;
+
+  left: 0;
+
+  right: 0;
+
+  background: rgba(75, 0, 130, 0.7); /* Royal Purple */
+
+  color: #FFD700; /* Royal Gold */
+
+  padding: 10px;
+
+  text-align: center;
+
+  font-weight: bold;
+
+  font-size: 1rem;
+
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+
+  border-bottom-left-radius: 12px;
+
+  border-bottom-right-radius: 12px;
+
+}
+
+
+
+.gallery-item:hover .caption {
+
+  opacity: 1;
+
+}
+
+  </style>
+
+</head>
+
+<body>
+
+  <nav>
+
+    <div class="logo">
+
+        <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+
+            <img src="images/logo.png" alt="Royal Events Kenya Logo" width="60" style="margin-right: 10px;">
+
+            <span>Royal Events Kenya</span>
+
+        </a>
+
+    </div>
+
+    <div class="menu-toggle">☰</div>
+
+    <ul class="nav-links">
+
+      <li><a href="#home">Home</a></li>
+
+      <li><a href="#about">About</a></li>
+
+      <li><a href="#services">Services</a></li>
+
+      <li><a href="#gallery">Gallery</a></li>
+
+      <li><a href="#testimonials">Testimonials</a></li>
+
+      <li><a href="#blog">Blog</a></li>
+
+      <li><a href="#contact">Contact</a></li>
+
+    </ul>
+
+  </nav>
+
+<!-- Hero Tagline -->
+
+  <header class="hero tagline" id="home">
+
+<section class="hero-text">
+
+  <h1 class="tagline-title">Making Every Event Royal</h1>
+
+  <p class="tagline-subtitle">Experience elegance, creativity, and professionalism with Royal Events Kenya.</p>
+
+</section>
+
+  <!-- Hero / Slideshow -->
+
+  <header class="slideshow" id="home">
+
+  <div class="slideshow-container">
+
+    <img src="https://images.pexels.com/photos/31280254/pexels-photo-31280254.jpeg" alt="Wedding party" class="slide active">
+
+    <img src="https://images.unsplash.com/photo-1625075963372-7320c2cca6f3?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Wedding setup" class="slide">
+
+    <img src="https://images.pexels.com/photos/14867246/pexels-photo-14867246.jpeg" alt="Catering services" class="slide">
+
+    <img src="https://images.pexels.com/photos/31098801/pexels-photo-31098801.jpeg" alt="Birthday pary" class="slide">
+
+    <img src="https://images.pexels.com/photos/15959553/pexels-photo-15959553.jpeg" alt="Baby shower" class="slide">
+
+    <img src="https://images.pexels.com/photos/6035629/pexels-photo-6035629.jpeg" alt="Bride and groom" class="slide">
+
+    <div class="header-content">
+
+    
+
+      <a href="#contact">Book Now</a>
+
+    </div>
+
+  </div>
+
+    
+
+  <!-- About -->
+
+  <section class="about"id="about">
+
+    <h2 class="section-title">About Us</h2>
+
+    <div class="about-section">
+
+      <div class="about-card">
+
+        <h3>Our Mission</h3>
+
+        <p>To provide exceptional event planning and management services that exceed our clients’ expectations, turning their visions into memorable experiences.</p>
+
+      </div>
+
+      <div class="about-card">
+
+        <h3>Our Vision</h3>
+
+        <p>To be the leading event management company in Kenya and beyond, renowned for creativity, professionalism, and customer satisfaction.</p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+    
+
+  <!-- Services -->
+
+  <section id="services">
+
+    <h2 class="section-title">Our Services</h2>
+
+    <div class="services">
+
+      <div class="service-card"><h3>Weddings</h3><p>Elegant and unforgettable wedding planning tailored to your love story.</p></div>
+
+      <div class="service-card"><h3>Corporate Events</h3><p>Professional and seamless execution for all your business functions.</p></div>
+
+      <div class="service-card"><h3>Parties & Celebrations</h3><p>From birthdays to baby showers — we bring the joy to your day.</p></div>
+
+      <div class="service-card"><h3>Event Branding</h3><p>Stand out with custom décor, signage, and branded materials.</p></div>
+
+      <div class="service-card"><h3>Catering Services</h3><p>Delicious menus and flawless service to delight your guests.</p></div>
+
+      <div class="service-card"><h3>Photography & Videography</h3><p>Capture every precious moment with professional photos and videos.</p></div>
+
+  </div>
+
+  </section>
+
+
+
+    <!-- Gallery Placeholder -->
+
+  <section class="gallery" id="gallery">
+
+  <h2 class="section-title">Gallery</h2>
+
+  <div class="gallery-grid">
+
+
+
+    <!-- Bridesmaid -->
+
+    <div class="gallery-item">
+
+      <a href="https://images.pexels.com/photos/29713178/pexels-photo-29713178.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000" data-lightbox="gallery" data-title="Bridesmaid">
+
+        <img src="https://images.pexels.com/photos/29713178/pexels-photo-29713178.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=600" alt="Bridesmaid">
+
+        <div class="caption">Bridesmaid</div>
+
+      </a>
+
+    </div>
+
+
+
+    <!-- Couple -->
+
+    <div class="gallery-item">
+
+      <a href="https://images.pexels.com/photos/19365954/pexels-photo-19365954.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000" data-lightbox="gallery" data-title="Couple">
+
+        <img src="https://images.pexels.com/photos/19365954/pexels-photo-19365954.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=600" alt="Couple">
+
+        <div class="caption">Couple</div>
+
+      </a>
+
+    </div>
+
+
+
+    <!-- Baby Shower -->
+
+    <div class="gallery-item">
+
+      <a href="https://images.pexels.com/photos/17024548/pexels-photo-17024548.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000" data-lightbox="gallery" data-title="Baby Shower">
+
+        <img src="https://images.pexels.com/photos/17024548/pexels-photo-17024548.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=600" alt="Baby Shower">
+
+        <div class="caption">Baby Shower</div>
+
+      </a>
+
+    </div>
+
+
+
+    <!-- Graduation Party -->
+
+    <div class="gallery-item">
+
+      <a href="https://images.pexels.com/photos/19580009/pexels-photo-19580009.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000" data-lightbox="gallery" data-title="Graduation Party">
+
+        <img src="https://images.pexels.com/photos/19580009/pexels-photo-19580009.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=600" alt="Graduation Party">
+
+        <div class="caption">Graduation Party</div>
+
+      </a>
+
+    </div>
+
+
+
+    <!-- Gift Wrap -->
+
+    <div class="gallery-item">
+
+      <a href="https://images.pexels.com/photos/17796/christmas-xmas-gifts-presents.jpg?auto=compress&cs=tinysrgb&dpr=2&h=1000" data-lightbox="gallery" data-title="Gift Wrap">
+
+        <img src="https://images.pexels.com/photos/17796/christmas-xmas-gifts-presents.jpg?auto=compress&cs=tinysrgb&dpr=2&h=600" alt="Gift Wrap">
+
+        <div class="caption">Gift Wrap</div>
+
+      </a>
+
+    </div>
+
+
+
+    <!-- Catering Services -->
+
+    <div class="gallery-item">
+
+      <a href="https://images.pexels.com/photos/12020465/pexels-photo-12020465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000" data-lightbox="gallery" data-title="Catering Services">
+
+        <img src="https://images.pexels.com/photos/12020465/pexels-photo-12020465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=600" alt="Catering Services">
+
+        <div class="caption">Catering Services</div>
+
+      </a>
+
+    </div>
+
+
+
+  </div>
+
+  </section>
+
+
+
+  <!-- Testimonials -->
+
+  <section id="testimonials">
+
+    <h2 class="section-title">Testimonials</h2>
+
+    
+
+    <div class="testimonials">
+
+      <div class="testimonial-card">
+
+        <p>"Royal Events made our wedding unforgettable! The attention to detail was amazing."</p>
+
+        <strong>- Grace & David</strong>
+
+      </div>
+
+      <div class="testimonial-card">
+
+        <p>"Truly professional team. Our corporate gala was a major success thanks to them."</p>
+
+        <strong>- KenTech Ltd.</strong>
+
+      </div>
+
+      <div class="testimonial-card">
+
+        <p>"From décor to coordination, everything was perfect. Our baby shower was magical!"</p>
+
+        <strong>- Susan M.</strong>
+
+      </div>
+
+      <div class="testimonial-card">
+
+        <p>"Royal Events exceeded our expectations. The birthday party was elegant and well-organized."</p>
+
+        <strong>- The Ochieng Family</strong>
+
+      </div>
+
+      <div class="testimonial-card">
+
+  <p>"They transformed our product launch into an unforgettable experience. The creativity was unmatched."</p>
+
+  <strong>- Savanna Foods Ltd.</strong>
+
+</div>
+
+<div class="testimonial-card">
+
+  <p>"The team was responsive, friendly, and organized. Our anniversary celebration felt like a fairytale."</p>
+
+  <strong>- Mr. & Mrs. Kamau</strong>
+
+</div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- Blog -->
+
+<section class="blog" id="blog">
+
+  <h2 class="section-title">Our Blog</h2>
+
+  <div class="blog-posts">
+
+
+
+    <div class="blog-post">
+
+      <h3><a href="blog/post1.html">10 Determiners of a Successful Event (You Won’t Believe #7!)</a></h3>
+
+      <p>Uncover the hidden factors that make or break any event – and why #7 will surprise you.</p>
+
+    </div>
+
+
+
+    <div class="blog-post">
+
+      <h3><a href="blog/post2.html">Why 80% of Events Fail Before They Even Begin</a></h3>
+
+      <p>Most events fail at the planning stage. Learn how to avoid common mistakes and guarantee success.</p>
+
+    </div>
+
+
+
+    <div class="blog-post">
+
+      <h3><a href="blog/post3.html">The Psychology of an Unforgettable Event</a></h3>
+
+      <p>It’s not just décor – it’s emotion. Discover how to create events that people will always remember.</p>
+
+    </div>
+
+
+
+    <div class="blog-post">
+
+      <h3><a href="blog/post4.html">5 Event Trends in Kenya You Need to Know in 2025</a></h3>
+
+      <p>Stay ahead with the latest Kenyan event trends – from eco-friendly weddings to AI-powered planning.</p>
+
+    </div>
+
+
+
+    <div class="blog-post">
+
+      <h3><a href="blog/post5.html">What Guests Really Notice (and What They Don’t)</a></h3>
+
+      <p>Stop stressing over the wrong details. Here’s what your guests actually care about at your event.</p>
+
+    </div>
+
+
+
+    <div class="blog-post">
+
+      <h3><a href="blog/post6.html">The Royal Checklist: 20 Must-Haves for a Stress-Free Event</a></h3>
+
+      <p>From budgeting to guest comfort, this checklist ensures your event flows like clockwork.</p>
+
+    </div>
+
+
+
+  </div>
+
+</section>
+
+  <!-- Contact -->
+
+  <section class="contact-section" id="contact">
+
+    <h2 class="section-title">Contact Us</h2>
+
+    <form action="https://formsubmit.co/royaleventscompany.co.ke@gmail.com" method="POST">
+
+      <input type="text" name="name" placeholder="Your Name" required>
+
+      <input type="email" name="email" placeholder="Your Email" required>
+
+      <input type="text" name="phone" placeholder="Your Phone Number" required>
+
+
+
+      <h3>🎉 Event Details</h3>
+
+      <label>Type of Event</label>
+
+      <select name="event_type" required>
+
+        <option value="">Select...</option>
+
+        <option>Wedding</option>
+
+        <option>Birthday</option>
+
+        <option>Corporate Event</option>
+
+        <option>Graduation</option>
+
+        <option>Concert</option>
+
+        <option>Baby Shower</option>
+
+        <option>Other</option>
+
+      </select>
+
+
+
+      <label>Event Theme or Style</label>
+
+      <input type="text" name="event_theme" placeholder="e.g. Rustic, Beach, Glamorous" required>
+
+      <label>Number of Guests</label>
+
+      <input type="number" name="guest_count" required>
+
+      <label>Preferred Event Date</label>
+
+      <input type="date" name="event_date" required>
+
+      <label>Event Duration</label>
+
+      <select name="event_duration" required>
+
+        <option value="">Select...</option>
+
+        <option>Half Day</option>
+
+        <option>Full Day</option>
+
+        <option>Multi-Day</option>
+
+      </select>
+
+
+
+      <label>Event Location</label>
+
+      <input type="text" name="event_location" placeholder="Venue address or general location" required>
+
+
+
+    <h3>🛠️ Services Needed</h3>
+
+<p>Select all that apply:</p>
+
+<div class="service-cards">
+
+  <label class="service-card">
+
+    <input type="checkbox" name="services[]" value="Wedding">
+
+    <span>Wedding</span>
+
+  </label>
+
+
+
+  <label class="service-card">
+
+    <input type="checkbox" name="services[]" value="Corporate">
+
+    <span>Corporate Event</span>
+
+  </label>
+
+
+
+  <label class="service-card">
+
+    <input type="checkbox" name="services[]" value="Parties">
+
+    <span>Party and Celebration</span>
+
+  </label>
+
+
+
+  <label class="service-card">
+
+    <input type="checkbox" name="services[]" value="Branding">
+
+    <span>Event Branding</span>
+
+  </label>
+
+
+
+  <label class="service-card">
+
+    <input type="checkbox" name="services[]" value="Catering">
+
+    <span>Catering Services</span>
+
+  </label>
+
+
+
+  <label class="service-card">
+
+    <input type="checkbox" name="services[]" value="Photography">
+
+    <span>Photography & Videography</span>
+
+  </label>
+
+</div>
+
+      <!-- Hidden input for "Other" -->
+
+<input type="text" name="other_service_details" id="other-details" placeholder="Please specify other service" style="display:none; margin-top:10px;">
+
+     
+
+      <label>Estimated Budget (KES)</label>
+
+      <input type="number" name="budget" placeholder="e.g. 100000">
+
+
+
+    <!-- 🛡️ Honeypot Anti-Spam Field (hidden to users) -->
+
+<div style="display:none;">
+
+  <input type="text" name="_honey" tabindex="-1" autocomplete="off">
+
+</div>
+
+<!-- ✅ Subject for Email -->
+
+<input type="hidden" name="_subject" value="New Contact Form Submission">
+
+     <button type="submit">Send</button>
+
+    </form>
+
+
+
+    <p style="text-align:center; margin-top:20px;">
+
+      📞 Call us: +254 797 859 232<br>
+
+      ✉️ Email: royaleventscompany.co.ke@gmail.com
+
+    </p>
+
+  </section>
+
+  <!-- Footer -->
+
+  <footer>
+
+    <p>&copy; 2025 Royal Events Kenya. All Rights Reserved.</p>
+
+  </footer>
+
+<!-- Lightbox2 JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox.min.js"></script>
+
+
+
+<!-- ✅ Hamburger Menu + Slideshow Script -->
+
+<script>
+
+  document.addEventListener("DOMContentLoaded", () => {
+
+    // ===== Hamburger Menu =====
+
+    const menuToggle = document.querySelector('.menu-toggle');
+
+    const navMenu = document.querySelector('.nav-links');
+
+
+
+    menuToggle.addEventListener('click', () => {
+
+      navMenu.classList.toggle('active');
+
+    });
+
+
+
+    // Close menu after clicking a link
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+
+      link.addEventListener('click', () => {
+
+        navMenu.classList.remove('active');
+
+      });
+
+    });
+
+
+
+    // ===== Slideshow =====
+
+    const slides = document.querySelectorAll(".slideshow-container img");
+
+    let currentIndex = 0;
+
+
+
+    function showSlide(index) {
+
+      slides.forEach((slide, i) => {
+
+        slide.classList.remove("active");
+
+        if (i === index) slide.classList.add("active");
+
+      });
+
+    }
+
+
+
+    function nextSlide() {
+
+      currentIndex = (currentIndex + 1) % slides.length;
+
+      showSlide(currentIndex);
+
+    }
+
+
+
+    // Show the first slide
+
+    showSlide(currentIndex);
+
+
+
+    // Auto change every 5 seconds
+
+    setInterval(nextSlide, 5000);
+
+  });
+
+</script>
+
+</body>
+
+</html>
+
+
+
+    
+
+    
