@@ -1647,6 +1647,21 @@ footer {
   color: #4b0082;
   font-family: 'Cinzel', serif;
 }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
 
   </style>
 
@@ -1787,11 +1802,6 @@ footer {
   </section>
 
 
-
-
-
-
-
   <!-- Testimonials -->
 
   <section id="testimonials">
@@ -1854,179 +1864,83 @@ footer {
 
   </section>
 
-<!-- Gallery Section -->
-
-<section class="gallery" id="gallery">
-
-  <h2 class="section-title">Gallery</h2>
-
-  <div class="gallery-grid">
-
-
-
-    <!-- Bridesmaid -->
-
-    <div class="gallery-item">
-
-      <a href="https://images.pexels.com/photos/29713178/pexels-photo-29713178.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000"
-
-         data-lightbox="bridesmaid" data-title="Bridesmaid">
-
-        <img src="https://images.pexels.com/photos/29713178/pexels-photo-29713178.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=600" alt="Bridesmaid">
-
-        <div class="caption">Bridesmaid</div>
-
+  <!-- Weddings -->
+  <section id="weddings">
+    <h2>Weddings</h2>
+    <div class="gallery-grid">
+      <a href="https://images.pexels.com/photos/265947/pexels-photo-265947.jpeg" data-lightbox="weddings">
+        <img src="https://images.pexels.com/photos/265947/pexels-photo-265947.jpeg" alt="Wedding">
       </a>
-
-      <!-- Extra images (hidden but accessible in Lightbox) -->
-
-      <a href="https://images.pexels.com/photos/3771837/pexels-photo-3771837.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000"
-
-         data-lightbox="bridesmaid" data-title="Bridesmaid"></a>
-
-      <a href="https://images.pexels.com/photos/7164074/pexels-photo-7164074.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000"
-
-         data-lightbox="bridesmaid" data-title="Bridesmaid"></a>
-
-    </div>
-
-
-
-    <!-- Couple -->
-
-    <div class="gallery-item">
-
-      <a href="https://images.pexels.com/photos/19365954/pexels-photo-19365954.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000"
-
-         data-lightbox="couple" data-title="Couple">
-
-        <img src="https://images.pexels.com/photos/19365954/pexels-photo-19365954.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=600" alt="Couple">
-
-        <div class="caption">Couple</div>
-
+      <a href="https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg" data-lightbox="weddings">
+        <img src="https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg" alt="Wedding">
       </a>
-
-      <a href="https://images.pexels.com/photos/29591972/pexels-photo-29591972.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000"
-
-         data-lightbox="couple" data-title="Couple"></a>
-
-      <a href="https://images.pexels.com/photos/1394882/pexels-photo-1394882.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000"
-
-         data-lightbox="couple" data-title="Couple"></a>
-
     </div>
+  </section>
 
-
-
-    <!-- Baby Shower -->
-
-    <div class="gallery-item">
-
-      <a href="https://images.pexels.com/photos/17024548/pexels-photo-17024548.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000"
-
-         data-lightbox="babyshower" data-title="Baby Shower">
-
-        <img src="https://images.pexels.com/photos/17024548/pexels-photo-17024548.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=600" alt="Baby Shower">
-
-        <div class="caption">Baby Shower</div>
-
+  <!-- Corporate Events -->
+  <section id="corporate">
+    <h2>Corporate Events</h2>
+    <div class="gallery-grid">
+      <a href="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg" data-lightbox="corporate">
+        <img src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg" alt="Corporate Event">
       </a>
-
-      <a href="https://images.pexels.com/photos/265947/pexels-photo-265947.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000"
-
-         data-lightbox="babyshower" data-title="Baby Shower"></a>
-
-      <a href="https://images.pexels.com/photos/29592024/pexels-photo-29592024.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000"
-
-         data-lightbox="babyshower" data-title="Baby Shower"></a>
-
-    </div>
-
-
-
-    <!-- Graduation Party -->
-
-    <div class="gallery-item">
-
-      <a href="https://images.pexels.com/photos/19580009/pexels-photo-19580009.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000"
-
-         data-lightbox="graduation" data-title="Graduation Party">
-
-        <img src="https://images.pexels.com/photos/19580009/pexels-photo-19580009.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=600" alt="Graduation Party">
-
-        <div class="caption">Graduation Party</div>
-
+      <a href="https://images.pexels.com/photos/256659/pexels-photo-256659.jpeg" data-lightbox="corporate">
+        <img src="https://images.pexels.com/photos/256659/pexels-photo-256659.jpeg" alt="Corporate Event">
       </a>
-
-      <a href="https://images.pexels.com/photos/325682/pexels-photo-325682.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000"
-
-         data-lightbox="graduation" data-title="Graduation Party"></a>
-
-      <a href="https://images.pexels.com/photos/459452/pexels-photo-459452.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000"
-
-         data-lightbox="graduation" data-title="Graduation Party"></a>
-
     </div>
+  </section>
 
-
-
-    <!-- Gift Wrap -->
-
-    <div class="gallery-item">
-
-      <a href="https://images.pexels.com/photos/17796/christmas-xmas-gifts-presents.jpg?auto=compress&cs=tinysrgb&dpr=2&h=1000"
-
-         data-lightbox="giftwrap" data-title="Gift Wrap">
-
-        <img src="https://images.pexels.com/photos/17796/christmas-xmas-gifts-presents.jpg?auto=compress&cs=tinysrgb&dpr=2&h=600" alt="Gift Wrap">
-
-        <div class="caption">Gift Wrap</div>
-
+  <!-- Parties -->
+  <section id="parties">
+    <h2>Parties & Celebrations</h2>
+    <div class="gallery-grid">
+      <a href="https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg" data-lightbox="parties">
+        <img src="https://images.pexels.com/photos/169198/pexels-photo-169198.jpeg" alt="Party">
       </a>
-
-      <a href="https://images.pexels.com/photos/1303091/pexels-photo-1303091.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000"
-
-         data-lightbox="giftwrap" data-title="Gift Wrap"></a>
-
-      <a href="https://images.pexels.com/photos/749353/pexels-photo-749353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000"
-
-         data-lightbox="giftwrap" data-title="Gift Wrap"></a>
-
-    </div>
-
-
-
-    <!-- Catering Services -->
-
-    <div class="gallery-item">
-
-      <a href="https://images.pexels.com/photos/12020465/pexels-photo-12020465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000"
-
-         data-lightbox="catering" data-title="Catering Services">
-
-        <img src="https://images.pexels.com/photos/12020465/pexels-photo-12020465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=600" alt="Catering Services">
-
-        <div class="caption">Catering Services</div>
-
+      <a href="https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg" data-lightbox="parties">
+        <img src="https://images.pexels.com/photos/3171837/pexels-photo-3171837.jpeg" alt="Party">
       </a>
-
-      <a href="https://images.pexels.com/photos/5665669/pexels-photo-5665669.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000"
-
-         data-lightbox="catering" data-title="Catering Services"></a>
-
-      <a href="https://images.pexels.com/photos/1267320/pexels-photo-1267320.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=1000"
-
-         data-lightbox="catering" data-title="Catering Services"></a>
-
     </div>
+  </section>
 
+  <!-- Event Branding -->
+  <section id="branding">
+    <h2>Event Branding</h2>
+    <div class="gallery-grid">
+      <a href="https://images.pexels.com/photos/3184300/pexels-photo-3184300.jpeg" data-lightbox="branding">
+        <img src="https://images.pexels.com/photos/3184300/pexels-photo-3184300.jpeg" alt="Branding">
+      </a>
+      <a href="https://images.pexels.com/photos/2343470/pexels-photo-2343470.jpeg" data-lightbox="branding">
+        <img src="https://images.pexels.com/photos/2343470/pexels-photo-2343470.jpeg" alt="Branding">
+      </a>
+    </div>
+  </section>
 
+  <!-- Catering -->
+  <section id="catering">
+    <h2>Catering Services</h2>
+    <div class="gallery-grid">
+      <a href="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg" data-lightbox="catering">
+        <img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg" alt="Catering">
+      </a>
+      <a href="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg" data-lightbox="catering">
+        <img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg" alt="Catering">
+      </a>
+    </div>
+  </section>
 
-  </div>
-
-</section>
-
-    
+  <!-- Photography & Videography -->
+  <section id="photography">
+    <h2>Photography & Videography</h2>
+    <div class="gallery-grid">
+      <a href="https://images.pexels.com/photos/274973/pexels-photo-274973.jpeg" data-lightbox="photography">
+        <img src="https://images.pexels.com/photos/274973/pexels-photo-274973.jpeg" alt="Photography">
+      </a>
+      <a href="https://images.pexels.com/photos/1236701/pexels-photo-1236701.jpeg" data-lightbox="photography">
+        <img src="https://images.pexels.com/photos/1236701/pexels-photo-1236701.jpeg" alt="Photography">
+      </a>
+    </div>
+  </section>
 
 
   <!-- Blog -->
@@ -2380,7 +2294,10 @@ footer {
   });
 
 </script>
-  
+    
+    <!-- Lightbox2 JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+
 </body>
 
 </html>
