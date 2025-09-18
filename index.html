@@ -1573,7 +1573,30 @@ button:hover, .btn:hover, .header-content a:hover {
     .gallery-grid img:hover {
       transform: scale(1.05);
     }
+    .social-media {
+  text-align: center;
+  padding: 2rem 0;
+  background: var(--royal-purple); /* or your footer bg */
+  color: white;
+}
 
+.social-media h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 15px;
+  font-size: 2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--royal-gold);
+  transform: scale(1.2);
+}
   </style>
 
 </head>
@@ -2156,6 +2179,24 @@ button:hover, .btn:hover, .header-content a:hover {
   <!-- Footer -->
 
   <footer>
+    <!-- Social Media Section -->
+<section class="social-media">
+  <h3>Follow Us</h3>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/royaleventskenya" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.tiktok.com/@royaleventskenya" target="_blank" aria-label="TikTok">
+      <i class="fab fa-tiktok"></i>
+    </a>
+    <a href="https://www.facebook.com/royaleventskenya" target="_blank" aria-label="Facebook">
+      <i class="fab fa-facebook"></i>
+    </a>
+  </div>
+</section>
+
+<!-- Font Awesome for Social Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <p>&copy; 2025 Royal Events Kenya. All Rights Reserved.</p>
 
