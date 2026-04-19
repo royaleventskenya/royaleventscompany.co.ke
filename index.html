@@ -2138,6 +2138,54 @@ button:hover, .btn:hover, .header-content a:hover {
 
     </form>
   </section>
+<h2>Pay for Your Event</h2>
+
+<input type="text" id="phone" placeholder="2547XXXXXXXX">
+<input type="number" id="amount" placeholder="Amount (KES)">
+<button onclick="pay()">Pay via M-Pesa</button>
+
+<script>
+async function pay() {
+  const phone = document.getElementById('phone').value;
+  const amount = document.getElementById('amount').value;
+
+  const res = await fetch("https://YOUR-BACKEND-URL/stkpush", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({ phone, amount })
+  });
+
+  const data = await res.json();
+  alert("STK Push sent! Check your phone.");
+}
+</script>
+  <button onclick="generateInvoice()">Download Invoice</button>
+
+<script>
+async function generateInvoice() {
+  const res = await fetch("https://YOUR-BACKEND-URL/invoice", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      clientName: "Client Name",
+      amount: 500,
+      email: "client@email.com"
+    })
+  });
+
+  const blob = await res.blob();
+  const url = window.URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "invoice.pdf";
+  a.click();
+}
+</script>
 <h2>Our Location</h2>
 <iframe 
   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.0896531172634!2d37.03681901410616!3d-1.0250859981868652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f4e84218eafd3%3A0xc0c7c8a149939045!2sThika%20Town%2C%20Kiambu%20County%2C%20Kenya!5e0!3m2!1sen!2ske!4v1700898123456!5m2!1sen!2sk" 
