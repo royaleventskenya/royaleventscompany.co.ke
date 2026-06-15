@@ -3,21 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us - Royal Events Kenya</title>
+  <title>About - Royal Events Kenya</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: #FAF9F6;
-      font-family: 'Poppins', sans-serif;
-      color: #333;
-    }
-
     nav {
       background: #FFD700;
       color: white;
@@ -29,7 +17,6 @@
       top: 0;
       z-index: 1000;
     }
-
     .logo {
       font-family: 'Cinzel', serif;
       font-size: 2rem;
@@ -40,23 +27,20 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
-
     .nav-links {
       display: flex;
       gap: 1.5rem;
       list-style: none;
     }
-
     .nav-links li a {
       color: white;
       text-decoration: none;
       font-weight: bold;
+      font-family: 'Poppins', sans-serif;
     }
-
     .nav-links li a:hover {
       color: #cfa100;
     }
-
     .menu-toggle {
       display: none;
       font-size: 2rem;
@@ -65,7 +49,6 @@
       background: none;
       border: none;
     }
-
     @media (max-width: 768px) {
       .nav-links {
         display: none;
@@ -77,35 +60,25 @@
         width: 100%;
         padding: 1rem 2rem;
       }
-
       .nav-links.active {
         display: flex;
       }
-
       .menu-toggle {
         display: block;
       }
     }
-
-    .about-hero {
-      background: linear-gradient(135deg, #3D0066, #D4AF37);
-      color: white;
-      text-align: center;
-      padding: 60px 20px;
+    body {
+      background-color: #FAF9F6;
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      margin: 0;
+      padding: 0;
     }
-
-    .about-hero h1 {
-      font-family: 'Cinzel', serif;
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
     .about-container {
       max-width: 1000px;
       margin: 60px auto;
       padding: 0 20px;
     }
-
     .about-section {
       background: white;
       padding: 40px;
@@ -113,23 +86,28 @@
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
       margin-bottom: 40px;
     }
-
     .about-section h2 {
       color: #3D0066;
       font-family: 'Cinzel', serif;
       font-size: 1.8rem;
       margin-bottom: 20px;
     }
-
     .about-section p {
       font-size: 1rem;
       line-height: 1.8;
+      color: #333;
     }
-
-    footer {
-      background-color: #1F1F1F;
-      color: #D4AF37;
+    .section-title {
+      color: #6A0DAD;
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
       text-align: center;
+      margin-bottom: 40px;
+    }
+    footer {
+      text-align: center;
+      background: #222;
+      color: #fff;
       padding: 20px;
       margin-top: 60px;
     }
@@ -148,42 +126,32 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
-
-  <section class="about-hero">
-    <h1>About Royal Events Kenya</h1>
-    <p>Creating unforgettable moments since 2015</p>
-  </section>
-
   <div class="about-container">
+    <h1 class="section-title">About Royal Events Kenya</h1>
     <div class="about-section">
       <h2>Our Story</h2>
       <p>Royal Events Kenya has been at the forefront of event planning and management for over a decade. We specialize in creating extraordinary experiences that leave lasting impressions on our clients.</p>
     </div>
-
     <div class="about-section">
       <h2>Our Mission</h2>
       <p>To transform visions into reality by delivering exceptional event planning services that exceed expectations. We believe every event tells a unique story.</p>
     </div>
-
     <div class="about-section">
       <h2>Why Choose Us?</h2>
       <p>With a team of experienced professionals, we bring creativity, expertise, and dedication to every project. Our track record speaks for itself - hundreds of satisfied clients and countless memorable events.</p>
     </div>
   </div>
-
   <footer>
     <p>&copy; 2024 Royal Events Kenya. All rights reserved.</p>
+    <p>Contact: info@royalevents.co.ke | Phone: +254 XXX XXXXXX</p>
   </footer>
-
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const menuToggle = document.querySelector('.menu-toggle');
       const navLinks = document.querySelector('.nav-links');
-
       menuToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
       });
-
       document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
           navLinks.classList.remove('active');

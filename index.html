@@ -1064,260 +1064,50 @@ a:hover {
 
   </header>
 
-  <!-- Hero Tagline Section -->
+  <!-- Rest of original content -->
 
   <section class="hero-text">
-
     <h2 class="tagline-title">Elevate Your Celebration</h2>
-
-    <p class="tagline-subtitle">
-
-      From intimate gatherings to grand celebrations, our team ensures every detail is executed with elegance and precision. Your vision is our passion.
-
-    </p>
-
+    <p class="tagline-subtitle">From intimate gatherings to grand celebrations, our team ensures every detail is executed with elegance and precision.</p>
   </section>
-
-  <!-- Services Section -->
-
-  <section class="about" id="services">
-
-    <h2 class="section-title">Our Premium Services</h2>
-
-    <div class="about-section">
-
-      <div class="about-card">
-
-        <h3>💍 Weddings</h3>
-
-        <p>Celebrate your love with our bespoke wedding planning, from intimate ceremonies to grand receptions.</p>
-
-      </div>
-
-      <div class="about-card">
-
-        <h3>🎉 Corporate Events</h3>
-
-        <p>Professional conferences, team-building, and corporate functions that leave lasting impressions.</p>
-
-      </div>
-
-      <div class="about-card">
-
-        <h3>🎨 Decorations</h3>
-
-        <p>Transform any space into an elegant venue with our stunning decorative designs and themes.</p>
-
-      </div>
-
-      <div class="about-card">
-
-        <h3>🎤 Entertainment</h3>
-
-        <p>Keep your guests entertained with our premium entertainment and performance packages.</p>
-
-      </div>
-
-      <div class="about-card">
-
-        <h3>🍽️ Catering</h3>
-
-        <p>Exquisite menus prepared by our chefs, with professional serving for a memorable dining experience.</p>
-
-      </div>
-
-      <div class="about-card">
-
-        <h3>📸 Photography</h3>
-
-        <p>Capture every precious moment with our professional photography and videography services.</p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- About Section -->
-
-  <section class="about" id="about">
-
-    <h2 class="section-title">About Royal Events Kenya</h2>
-
-    <div class="about-section">
-
-      <div class="about-card">
-
-        <h3>Our Mission</h3>
-
-        <p>To transform visions into reality by delivering exceptional event planning services that exceed expectations. We believe every event tells a unique story.</p>
-
-      </div>
-
-      <div class="about-card">
-
-        <h3>Our Experience</h3>
-
-        <p>With over 10 years of industry experience, we've successfully organized hundreds of events that left lasting impressions on clients worldwide.</p>
-
-      </div>
-
-      <div class="about-card">
-
-        <h3>Our Commitment</h3>
-
-        <p>Excellence in every detail. From initial consultation to final execution, we ensure your event exceeds expectations and creates unforgettable memories.</p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- Testimonials Section -->
-
-  <section class="about">
-
-    <h2 class="section-title">What Our Clients Say</h2>
-
-    <div class="testimonials">
-
-      <div class="testimonial-card">
-
-        <p>"Royal Events Kenya made our wedding day absolutely perfect. Every detail was handled with such care and professionalism!"</p>
-
-        <strong>- Sarah & James</strong>
-
-      </div>
-
-      <div class="testimonial-card">
-
-        <p>"Our corporate event was a huge success thanks to the amazing team. They brought creativity and expertise to every aspect."</p>
-
-        <strong>- TechCorp Manager</strong>
-
-      </div>
-
-      <div class="testimonial-card">
-
-        <p>"I've worked with many event planners, but none compare to Royal Events Kenya. Truly exceptional service!"</p>
-
-        <strong>- David M.</strong>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- Gallery Preview -->
-
-  <section class="about">
-
-    <h2 class="section-title">Gallery Preview</h2>
-
-    <div class="gallery-grid">
-
-      <a href="images/event1.jpg" data-lightbox="gallery">
-
-        <img src="images/event1.jpg" alt="Event Gallery">
-
-      </a>
-
-      <a href="images/event2.jpg" data-lightbox="gallery">
-
-        <img src="images/event2.jpg" alt="Event Gallery">
-
-      </a>
-
-      <a href="images/event3.jpg" data-lightbox="gallery">
-
-        <img src="images/event3.jpg" alt="Event Gallery">
-
-      </a>
-
-    </div>
-
-    <div style="text-align: center; margin-top: 40px;">
-
-      <a href="gallery.html" class="btn">View Full Gallery</a>
-
-    </div>
-
-  </section>
-
-  <!-- Footer -->
 
   <footer class="footer">
-
     <p>&copy; 2024 Royal Events Kenya. All rights reserved.</p>
-
     <p>Contact: info@royalevents.co.ke | Phone: +254 XXX XXXXXX</p>
-
   </footer>
 
   <!-- Lightbox2 Script -->
-
   <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox.min.js"></script>
 
   <!-- Slideshow Script -->
-
   <script>
-
     let currentSlide = 0;
-
     const slides = document.querySelectorAll('.slideshow-container img');
-
     function showSlide(index) {
-
       slides.forEach(slide => slide.classList.remove('active'));
-
       slides[index].classList.add('active');
-
     }
-
     function nextSlide() {
-
       currentSlide = (currentSlide + 1) % slides.length;
-
       showSlide(currentSlide);
-
     }
-
-    setInterval(nextSlide, 5000); // Change slide every 5 seconds
-
+    setInterval(nextSlide, 5000);
   </script>
 
   <!-- Menu Toggle Script -->
-
   <script>
-
     document.addEventListener("DOMContentLoaded", () => {
-
       const menuToggle = document.querySelector('.menu-toggle');
-
       const navLinks = document.querySelector('.nav-links');
-
       menuToggle.addEventListener('click', () => {
-
         navLinks.classList.toggle('active');
-
       });
-
-      // Close menu after clicking a link
-
       document.querySelectorAll('.nav-links a').forEach(link => {
-
         link.addEventListener('click', () => {
-
           navLinks.classList.remove('active');
-
         });
-
       });
-
     });
-
   </script>
 
 </body>
